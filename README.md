@@ -1,1 +1,0 @@
-## Maxthon6 Quick Access

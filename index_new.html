@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新标签页</title>
+  <link rel="stylesheet" href="./static/pkg/aio_98ff497.css">
+  <script>
+    // 数据请求提前发出， 提升一秒左右的速度
+    var __PRELOAD__ = {
+      mackCb: function(cgi) {
+        return function(data) {
+          if (typeof __PRELOAD__[cgi] === 'function') {
+            __PRELOAD__[cgi](data);
+          }
+          __PRELOAD__[cgi] = data || {};
+          localStorage.setItem('MAP_LIST_JSON', JSON.stringify(data || {}));
+        };
+      }
+    };
+    var __PRELOAD__CB__0 = __PRELOAD__.mackCb('map_list.json');
+  </script>
+  <script src="https://pc-newtab.maxthon.com/api/data/misc.php?res=map&callback=__PRELOAD__CB__0&lang=zh-cn"></script>
+</head>
+
+<body>
+  <!-- 节日皮肤组件 -->
+  <div id="skin" class="skin" data-s-m="skin">
+    <div class="skin-wrap"></div>
+    <span id="skin-top-btn" class="close"></span>
+  </div>
+  <!-- 搜索引擎组件 -->
+  <div class="search-bar">
+    <form class="search-form" action="https://www.baidu.com/baidu" method="get">
+      <div class="search-box">
+        <div class="search-engine">
+          <span class="change-engine"></span>
+          <div class="engine-list" style="display: none;"></div>
+        </div>
+        <div class="search-input">
+          <input type="text" name="word" class="button" placeholder="" />
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- 我的站点 -->
+  <div id="wrapper">
+    <ul id="top" class="clearfix"></ul>
+    <div id="main"></div>
+  </div>
+  <!-- 侧边栏组件 -->
+  <div id="siderbar" class="siderbar">
+    <ul>
+      <li>
+        <span id="config-button"></span>
+      </li>
+    </ul>
+  </div>
+  <!-- 文件夹弹框 -->
+  <div id="group" class="dialog">
+    <div class="dialog-warp">
+      <div id="group_top" class="top">
+        <input id="group-title" class="title" value="" />
+        <a class="close">[关闭]</a>
+      </div>
+      <div id="group_body" class="body">
+        <div id="group_list" class="group-list"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 文件夹删除对话框 -->
+  <div id="delete_folder" class="dialog"></div>
+  <!-- 笔记已删除 -->
+  <div id="note_is_delete" class="dialog"></div>
+  <!-- poster 一个初始化的画面, 解决黑屏的问题  -->
+  <div id="wallpapers">
+    <div class="anim_fade_image"></div>
+    <video id="media" autoplay muted preload="true" loop="loop"></video>
+  </div>
+  <!-- 阴影 -->
+  <div id="mx_mask_layer" class="mx-mask-layer"></div>
+  <!-- js -->
+  <script id="page_data" type="text/javascript" version="20201119"></script>
+  <script id="page_tpl" type="text/template" version="20201119"></script>
+  <script id="activity_tpl" type="text/template" version="2017102517"></script>
+  <script type="text/javascript">
+    var staticServer = 'https://pc-newtab-img.maxthon.com/static',
+      cdnServer = staticServer + '/v1.1',
+      skinDisplay;
+  </script>
+  <script type="text/javascript" src="./static/pkg/lib_3b377a1.js"></script>
+  <script type="text/javascript" src="./static/pkg/main_1c2949f.js"></script>
+</body>
+
+</html>

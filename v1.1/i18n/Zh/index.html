@@ -1,0 +1,749 @@
+﻿<!DOCTYPE HTML>
+<html manifest="/index.appcache">
+<head>
+	<meta charset="utf-8" />
+	<title>新标签页</title>
+	<meta name="renderer" content="webkit" />
+	<link rel="stylesheet" href="http://pc-newtab.maxthon.com/v1.1/css/style.min.css?v=1123qwe4r5t6y7u5t8i9o0p">
+</head>
+
+<body>
+	<div class="quickdial">
+		<ul id="hot_nav_list" class="hot-nav clearfix dragable"></ul>
+		<div id="quick_dial_tabpanels" class="grid1">
+			<div class="quick-dial-nav-header">
+				<ul class="quick-dial-nav-tab">
+					<li class="active">
+						<a href="javascript:void(0);" title="我的站点">我的站点</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" title="推荐站点">推荐站点</a>
+					</li>
+				</ul>
+			</div>
+			<div class="quick-dial-nav-body">
+				<!-- 我的站点 -->
+				<div id="quick_dial_my_site" class="clearfix">
+					<ul id="my_site_nav_list" class="dragable clearfix "></ul>
+				</div>
+				<!-- 推荐站点 -->
+				<div id="quick_dial_hot_site" class="clearfix" style="display:none;">
+					<ol class="clearfix">
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=tmall" title="天猫精选" target="_blank">
+								<span class="icon">
+									<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/Tmall.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="天猫"/>
+								</span>
+								天猫精选
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=jd" title="京东" target="_blank">
+								京东
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=aitaobao" title="爱淘宝" target="_blank">
+								爱淘宝
+							</a>
+						</li>
+						<li>
+							<a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DjVK3GINMOswcQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAvHDY8Now%2BeooQBScTlIlmEqdXuB2ywoyFJnKOsTZCUFJjzv0O4s9q%2B353tkt4y7tOo0BcZWWIRYYA%2FDpPH01wK9AmARIwX9K%2BAjBDXvuqoU47FHjfsActnIQu5PdXpojKJn5AyUbPoV" title="聚划算" target="_blank">
+								聚划算
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=taobao" title="淘宝网" target="_blank">
+								淘宝网
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=vipshop" title="唯品会" target="_blank">
+								唯品会
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=amazon" title="亚马逊" target="_blank">
+								亚马逊
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=yhd" title="1号店" target="_blank">
+								1号店
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=suning" title="苏宁易购" target="_blank">
+								苏宁易购
+							</a>
+						</li>
+						<li>
+							<a href="http://u.ctrip.com/union/CtripRedirect.aspx?TypeID=2&Allianceid=18105&sid=449687&OUID=&jumpUrl=http://www.ctrip.com" title="携程旅行网" target="_blank">
+								携程旅行网
+							</a>
+						</li>
+						<li>
+							<a href="http://www.tuniu.com/?p=13901&cmpid=mkt_03028201&utm_campaign=lifestyle&utm_source=maxthon.cn&utm_medium=referral" title="途牛旅游网" target="_blank">
+								途牛旅游网
+							</a>
+						</li>
+						<li>
+							<a href="http://www.sina.com.cn/" title="新浪" target="_blank">
+								新浪
+							</a>
+						</li>
+						<li>
+							<a href="http://www.ifeng.com/#_zbs_maxthon" title="凤凰网" target="_blank">
+								凤凰网
+							</a>
+						</li>
+						<li>
+							<a href="http://www.163.com/#frp10" title="网易" target="_blank">
+								网易
+							</a>
+						</li>
+						<li>
+							<a href="http://www.qq.com/" title="腾讯" target="_blank">
+								腾讯
+							</a>
+						</li>
+						<li>
+							<a href="http://mini.eastday.com/" title="头条新闻" target="_blank">
+								头条新闻
+							</a>
+						</li>
+						<li>
+							<a href="http://www.autohome.com.cn/?pvareaid=101581" title="汽车之家" target="_blank">
+								汽车之家
+							</a>
+						</li>
+						<li>
+							<a href="http://www.youku.com/" title="优酷" target="_blank">
+								优酷
+							</a>
+						</li>
+						<li>
+							<a href="http://www.iqiyi.com/" title="爱奇艺" target="_blank">
+								爱奇艺
+							</a>
+						</li>
+						<li>
+							<a href="http://tv.sohu.com/?lcode=AAAAI8cJIH0zbD_j7vM06mKU-H-ufrd6-IyD4U7nXbj2ixyHWYs9o_-LUX-.cf6&lqd=10217" title="搜狐视频" target="_blank">
+								搜狐视频
+							</a>
+						</li>
+						<li>
+							<a href="http://www.tudou.com/" title="土豆" target="_blank">
+								土豆
+							</a>
+						</li>
+						<li>
+							<a href="http://v.qq.com/" title="腾讯视频" target="_blank">
+								腾讯视频
+							</a>
+						</li>
+						<li>
+							<a href="http://www.le.com/" title="乐视网" target="_blank">
+								乐视网
+							</a>
+						</li>
+						<li>
+							<a href="http://www.bilibili.com/" title="哔哩哔哩" target="_blank">
+								哔哩哔哩
+							</a>
+						</li>
+						<li>
+							<a href="http://www.acfun.tv/" title="AcFun" target="_blank">AcFun</a>
+						</li>						
+						<li>
+							<a href="https://wx.qq.com/" title="微信网页版" target="_blank">
+								微信网页版
+							</a>
+						</li>
+						<li>
+							<a href="http://www.weibo.com/" title="新浪微博" target="_blank">
+								新浪微博
+							</a>
+						</li>
+						<li>
+							<a href="http://www.douban.com/" title="豆瓣网" target="_blank">
+								豆瓣网
+							</a>
+						</li>						
+						<li>
+							<a href="http://music.163.com/" title="网易云音乐" target="_blank">
+								网易云音乐
+							</a>
+						</li>
+						<li>
+							<a href="http://y.qq.com/" title="QQ音乐" target="_blank">
+								QQ音乐
+							</a>
+						</li>
+						<li>
+							<a href="http://www.xiami.com/" title="虾米音乐" target="_blank">
+								虾米音乐
+							</a>
+						</li>
+						<li>
+							<a href="http://www.haha.mx/?qatjmx5" title="傲游哈哈" target="_blank">
+								<span class="icon">
+									<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/haha_mx.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="傲游哈哈"/>
+								</span>
+								傲游哈哈
+							</a>
+						</li>
+					</ol>
+					<!-- 热门分类 -->
+					<div class="nav-hot-wrapper clearfix">
+						<div class="container">
+							<h4> <em class="news"></em>
+								新闻
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.xinhuanet.com/" target="_blank" title="新华网">新华网</a>
+								</li>
+								<li>
+									<a href="http://www.huanqiu.com/" target="_blank" title="环球网">环球网</a>
+								</li>
+								<li>
+									<a href="http://www.cankaoxiaoxi.com/" target="_blank" title="参考消息">参考消息</a>
+								</li>
+								<li>
+									<a href="http://www.zaobao.com/" target="_blank" title="联合早报">联合早报</a>
+								</li>
+								<li>
+									<a href="http://www.chinanews.com/" target="_blank" title="中新网">中新网</a>
+								</li>
+								<li>
+									<a href="http://www.thepaper.cn/" target="_blank" title="澎湃新闻">澎湃新闻</a>
+								</li>
+								<li>
+									<a href="http://www.toutiao.com/" target="_blank" title="今日头条">今日头条</a>
+								</li>
+								<li>
+									<a href="http://www.people.com.cn/" target="_blank" title="人民网">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/people.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="人民网"/>
+										</span>
+										人民网
+									</a>
+								</li>
+								<li>
+									<a href="http://news.baidu.com/" target="_blank" title="百度新闻">百度新闻</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4> <em class="gouwu"></em>
+								购物
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=taobao" target="_blank" title="淘宝">淘宝</a>
+								</li>
+								<li>
+									<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=jd" target="_blank" title="京东">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/JD.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="京东"/>
+										</span>
+										京东
+									</a>
+								</li>
+								<li>
+									<a href="http://www.tmall.com" target="_blank" title="天猫">天猫</a>
+								</li>
+								<li>
+									<a href="http://go.maxthon.cn/redir/mx5/qa.htm?f=gome" target="_blank" title="国美在线">国美在线</a>
+								</li>
+								<li>
+									<a href="http://www.smzdm.com" target="_blank" title="什么值得买">什么值得买</a>
+								</li>
+								<li>
+									<a href="http://www.yohobuy.com" target="_blank" title="YOHO!BUY">YOHO!BUY</a>
+								</li>
+								<li>
+									<a href="http://www.iliangcang.com" target="_blank" title="良仓">良仓</a>
+								</li>
+								<li>
+									<a href="http://www.yougou.com" target="_blank" title="优购">优购</a>
+								</li>
+								<li>
+									<a href="http://a.union.mi.com/mua?c=10741.0002" target="_blank" title="小米">小米</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4>
+								<em class="yule"></em>
+								搞笑
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.haha.mx/?qatjmx5" target="_blank" title="傲游哈哈">傲游哈哈</a>
+								</li>
+								<li>
+									<a href="http://www.qiushibaike.com/" target="_blank" title="糗事百科">糗事百科</a>
+								</li>
+								<li>
+									<a href="http://www.pengfu.com/" target="_blank" title="捧腹网">捧腹网</a>
+								</li>
+								<li>
+									<a href="http://lengxiaohua.com/" target="_blank" title="冷笑话">冷笑话</a>
+								</li>
+								<li>
+									<a href="http://baozoumanhua.com/" target="_blank" title="暴走漫画">暴走漫画</a>
+								</li>
+								<li>
+									<a href="http://www.budejie.com/" target="_blank" title="百思不得姐">百思不得姐</a>
+								</li>
+								<li>
+									<a href="http://www.mahua.com/" target="_blank" title="快乐麻花">快乐麻花</a>
+								</li>
+								<li>
+									<a href="http://www.fanjian.net/" target="_blank" title="犯贱志">犯贱志</a>
+								</li>
+								<li>
+									<a href="http://jandan.net/" target="_blank" title="煎蛋">煎蛋</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4>
+								<em class="zixun"></em>
+								资讯
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="https://36kr.com/" target="_blank" title="36Kr">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/36kr.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="36kr"/>
+										</span>
+										36Kr
+									</a>
+								</li>
+								<li>
+									<a href="https://www.huxiu.com/" target="_blank" title="虎嗅网">虎嗅网</a>
+								</li>
+								<li>
+									<a href="http://www.ifanr.com/" target="_blank" title="爱范儿">爱范儿</a>
+								</li>
+								<li>
+									<a href="http://www.guokr.com/" target="_blank" title="果壳">果壳</a>
+								</li>
+								<li>
+									<a href="http://www.qdaily.com/" target="_blank" title="好奇心日报">好奇心日报</a>
+								</li>
+								<li>
+									<a href="http://www.pingwest.com/" target="_blank" title="品玩">品玩</a>
+								</li>
+								<li>
+									<a href="http://www.geekpark.net/" target="_blank" title="极客公园">极客公园</a>
+								</li>
+								<li>
+									<a href="http://www.leiphone.com/" target="_blank" title="雷锋网">雷锋网</a>
+								</li>
+								<li>
+									<a href="http://www.zealer.com/" target="_blank" title="ZEALER">ZEALER</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4>
+								<em class="shequ"></em>
+								社交
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.zhihu.com" target="_blank" title="知乎">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/zhihu.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="知乎"/>
+										</span>
+										知乎
+									</a>
+								</li>
+								<li>
+									<a href="http://qzone.qq.com/" target="_blank" title="QQ空间">QQ空间</a>
+								</li>
+								<li>
+									<a href="https://cn.linkedin.com/" target="_blank" title="LinkedIn">LinkedIn</a>
+								</li>
+								<li>
+									<a href="http://tieba.baidu.com/" target="_blank" title="百度贴吧">百度贴吧</a>
+								</li>
+								<li>
+									<a href="http://www.jianshu.com" target="_blank" title="简书">简书</a>
+								</li>
+								<li>
+									<a href="http://www.mop.com" target="_blank" title="猫扑">猫扑</a>
+								</li>
+								<li>
+									<a href="http://www.tianya.cn" target="_blank" title="天涯">天涯</a>
+								</li>
+								<li>
+									<a href="http://www.renren.com" target="_blank" title="人人网">人人网</a>
+								</li>
+								<li>
+									<a href="http://www.kaixin001.com/" target="_blank" title="开心网">开心网</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4>
+								<em class="service"></em>
+								服务
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.58.com/?path=?utm_source%3d5uad%26utm_campaign%3d5uad-109" target="_blank" title="58同城">58同城</a>
+								</li>
+								<li>
+									<a href="http://www.ganji.com/?ca_name=dh_cpc_mingzhan/" target="_blank" title="赶集网">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/ganji.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="赶集网"/>
+										</span>
+										赶集网
+									</a>
+								</li>
+								<li>
+									<a href="http://www.fang.com" target="_blank" title="房天下">房天下</a>
+								</li>
+								<li>
+									<a href="http://www.lianjia.com" target="_blank" title="链家">链家</a>
+								</li>
+								<li>
+									<a href="http://5i5j.com" target="_blank" title="我爱我家">我爱我家</a>
+								</li>
+								<li>
+									<a href="http://www.icbc.com.cn" target="_blank" title="工商银行">工商银行</a>
+								</li>
+								<li>
+									<a href="http://www.ccb.com" target="_blank" title="建设银行">建设银行</a>
+								</li>
+								<li>
+									<a href="http://www.bankcomm.com" target="_blank" title="交通银行">交通银行</a>
+								</li>
+								<li>
+									<a href="http://www.cmbchina.com" target="_blank" title="招商银行">招商银行</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4><em class="game"></em>游戏</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.4399.com" target="_blank" title="4399小游戏">4399小游戏</a>
+								</li>
+								<li>
+									<a href="http://www.duowan.com" target="_blank" title="多玩游戏">多玩游戏</a>
+								</li>
+								<li>
+									<a href="http://www.gamersky.com" target="_blank" title="游民星空">游民星空</a>
+								</li>
+								<li>
+									<a href="http://www.tgbus.com" target="_blank" title="电玩巴士">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/tgbus.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="电玩巴士"/>
+										</span>
+										电玩巴士
+									</a>
+								</li>
+								<li>
+									<a href="http://www.ali213.net" target="_blank" title="游侠网">游侠网</a>
+								</li>
+								<li>
+									<a href="http://www.17173.com" target="_blank" title="17173">17173</a>
+								</li>
+								<li>
+									<a href="http://www.3dmgame.com" target="_blank" title="3DMGAME">3DMGAME</a>
+								</li>
+								<li>
+									<a href="http://www.pcgames.com.cn/" target="_blank" title="太平洋游戏">太平洋游戏</a>
+								</li>
+								<li>
+									<a href="http://www.7k7k.com/" target="_blank" title="7K7K">7K7K</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4><em class="read"></em>阅读</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.qidian.com/" target="_blank" title="起点中文网">起点中文网</a>
+								</li>
+								<li>
+									<a href="http://book.qq.com/" target="_blank" title="QQ阅读">QQ阅读</a>
+								</li>
+								<li>
+									<a href="http://www.zongheng.com/" target="_blank" title="纵横中文网">纵横中文网</a>
+								</li>
+								<li>
+									<a href="http://www.xxsy.net/" target="_blank" title="潇湘书院">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/xxsy.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="潇湘书院"/>
+										</span>
+										潇湘书院
+									</a>
+								</li>
+								<li>
+									<a href="http://www.hongxiu.com/" target="_blank" title="红袖添香">红袖添香</a>
+								</li>
+								<li>
+									<a href="http://www.readnovel.com/" target="_blank" title="小说阅读网">小说阅读网</a>
+								</li>
+								<li>
+									<a href="http://book.sina.com.cn/" target="_blank" title="新浪读书">新浪读书</a>
+								</li>
+								<li>
+									<a href="http://yuedu.163.com/" target="_blank" title="网易云阅读">网易云阅读</a>
+								</li>
+								<li>
+									<a href="http://www.8kana.com/" target="_blank" title="热门小说">热门小说</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4><em class="other"></em>其他</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://mail.163.com/" target="_blank" title="163邮箱">163邮箱</a>
+								</li>
+								<li>
+									<a href="http://mail.sina.com.cn/" target="_blank" title="新浪邮箱">新浪邮箱</a>
+								</li>
+								<li>
+									<a href="http://mail.10086.cn/" target="_blank" title="139邮箱">139邮箱</a>
+								</li>
+								<li>
+									<a href="http://www.zhaopin.com/" target="_blank" title="智联招聘">智联招聘</a>
+								</li>
+								<li>
+									<a href="http://www.51job.com/" target="_blank" title="前程无忧">前程无忧</a>
+								</li>
+								<li>
+									<a href="http://www.lagou.com" target="_blank" title="拉勾网">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/v1.1/image/icon/lagou.ico" onerror="this.src='http://pc-newtab.maxthon.com/v1.1/image/icon/6000.png'" width="16" height="16"  alt="拉勾网"/>
+										</span>
+										拉勾网
+									</a>
+								</li>
+								<li>
+									<a href="http://www.langao.com/go.php?site=jiayuan&uid=308&m=http://www.jiayuan.com" target="_blank" title="世纪佳缘">世纪佳缘</a>
+								</li>
+								<li>
+									<a href="http://www.baihe.com/betatest/betatest_newlandpage.html?policy=1&Channel=xmkj-pc&Code=4" title="百合网" target="_blank">百合网</a>
+								</li>
+								<li>
+									<a href="http://www.zhenai.com/" target="_blank" title="珍爱网">珍爱网</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 添加快速拨号 -->
+	<div id="add_quick_dial" class="a-quick-dial-layer">
+		<div class="a-quick-dial-warp">
+			<header class="a-quick-dial-header clearfix">
+				<ul class="a-quick-dial-tab">
+					<li class="selected">
+						<span class="nav-grid">推荐网站</span>
+					</li>
+					<li>
+						<span class="nav-grid">自定义添加</span>
+					</li>
+				</ul>
+				<span class="close">×</span>
+			</header>
+			<article class="a-quick-dial-add-list clearfix">
+				<ul class="a-quick-dial-nav clearfix">
+					<li class="current" data-code="default">
+						<a href="javascript:void(0);">热门网址</a>
+					</li>
+					<li data-code="news">
+						<a href="javascript:void(0);">新闻资讯</a>
+					</li>
+					<li data-code="videos">
+						<a href="javascript:void(0);">影视频道</a>
+					</li>
+					<li data-code="shopping">
+						<a href="javascript:void(0);">网上购物</a>
+					</li>
+					<li data-code="social">
+						<a href="javascript:void(0);">社交网络</a>
+					</li>
+					<li data-code="fiction">
+						<a href="javascript:void(0);">文学小说</a>
+					</li>
+					<li data-code="game">
+						<a href="javascript:void(0);">游戏娱乐</a>
+					</li>
+					<li data-code="service">
+						<a href="javascript:void(0);">生活服务</a>
+					</li>
+				</ul>
+				<div class="a-quick-dial-search">
+					<input id="a_quick_dial_search_btn" name="" type="input" placeholder="查找网站" />
+					<span class="a-quick-dial-search-icon"></span>
+				</div>
+				<ul class="a-quick-dial-img-list clearfix"></ul>
+			</article>
+			<article class="a-quick-dial-custome-add clearfix" style="display:none;">
+				<div class="a-quick-dial-input">
+					<label for="url">网址</label>
+					<input name="url" type="input" class="input" placeholder="请输入网址*" autocomplete="off" />
+					<input name="image" type="hidden" value="" />
+					<input name="colorblock" type="hidden" value="" />
+					<input name="isHot" type="hidden" value="" />
+					<span class="error">
+						<em>icon</em>
+						<span>请输入标题</span>
+					</span>
+				</div>
+				<div class="a-quick-dial-input">
+					<label for="title">标题</label>
+					<input name="title" type="input" class="input" placeholder="请输入标题" default="" />
+				</div>
+				<div class="a-quick-dial-input">
+					<label for="style">自定义样式</label>
+					<input type="radio" name="style" class="radio" checked="checked" value="0" /> 图片logo
+					<input type="radio" name="style" class="radio" value="1" /> 色块文字
+				</div>
+				<div class="a-quick-dial-input">
+					<div class="a-quick-dial-custome-style">
+						<ul id="screen_shot">
+							<li class="selected">
+								<a href="javascript:void(0);">网页截图</a>
+							</li>
+						</ul>
+						<ul id="color_font" class="w900 hide">
+							<li class="color-block-6 selected">
+								<span>色块文字</span>
+							</li>
+							<li class="color-block-5">
+								<span>色块文字</span>
+							</li>
+							<li class="color-block-4">
+								<span>色块文字</span>
+							</li>
+							<li class="color-block-8">
+								<span>色块文字</span>
+							</li>
+							<li class="color-block-1">
+								<span>色块文字</span>
+							</li>
+							<li class="color-block-3">
+								<span>色块文字</span>
+							</li>
+							<li class="color-block-7">
+								<span>色块文字</span>
+							</li>
+							<li class="color-block-2">
+								<span>色块文字</span>
+							</li>
+							<li class="color-block-9">
+								<span>色块文字</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="a-quick-dial-input">
+					<button id="a_quick_dial_add_btn" class="a-quick-dial-add-btn" type="button">添加此项</button>
+				</div>
+			</article>
+		</div>
+	</div>
+	<!-- 文件夹弹框 -->
+	<div id="folder_quick_dial" class="a-quick-dial-layer">
+		<div class="bar"><span class="title" contenteditable="false">文件夹</span><a class="close">[关闭]</a></div>
+		<div class="a-quick-dial-warp">
+			<article class="a-quick-dial-add-list clearfix">
+				<ul class="a-quick-dial-img-list clearfix"></ul>
+			</article>
+		</div>
+	</div>
+	<!-- 文件夹删除对话框 -->
+	<div id="delete_folder" class="a-quick-dial-layer dialog"></div>
+	<div id="s_skin_layer" class="s-kin-layer">
+		<h4>
+			选择背景
+			<a href="javascript:void(0);" class="s-kin-layer-close">×</a>
+		</h4>
+		<ul class="skin-img-list">
+			<li class="skin-img-item" name="defaultlight">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/light.jpg"/> <em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="defaultdark">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/deep.jpg" /><em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="sky">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/sky.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="bridge">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/bridge.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="dandelion">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/dandelion.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="sunrise">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/sundown.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="vintage">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/old.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="nightview">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/night.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="peace">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/balloon.jpg" />	
+					<em></em>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="s-skin-container s-isindex-wrap"></div>
+	<footer>
+		<button id="s_skin_button" href="javascript:void(0);" class="page-settings" title="切换背景"></button>
+	</footer>
+	<div id="mx_mask_layer" class="mx-mask-layer"></div>
+	<!-- 右键菜单 -->
+	<div id="layers" class="layers">
+		<div class="mx-popup-menu"></div>
+		<div class="mx-drag-div"></div>
+		<div class="mx-swap-div"></div>
+	</div>
+	<script type="text/javascript">
+		var cdnServer = 'http://pc-newtab.maxthon.com/v1.1';
+	</script>
+	<script type="text/javascript" src="http://pc-newtab.maxthon.com/v1.1/i18n/Zh/data.js"></script>
+	<script src="http://pc-newtab.maxthon.com/v1.1/js/main.min.js?v=1123qwe4r5t6y7u5t8i9o0p"></script>
+</body>
+
+</html>

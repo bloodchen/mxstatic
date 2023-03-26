@@ -1,0 +1,221 @@
+﻿<!DOCTYPE HTML>
+<html manifest="/index.appcache">
+<head>
+	<meta charset="utf-8" />
+	<title>NewTab</title>
+	<meta name="renderer" content="webkit"/>
+	<link rel="stylesheet" href="http://pc-newtab.maxthon.com/v1.1/css/style.min.css?v=1123qwe4r5t6y7u5t8i9o0p">
+</head>
+<body>
+	<div class="quickdial">
+		<ul id="hot_nav_list" class="hot-nav clearfix dragable"></ul>
+		<div id="quick_dial_tabpanels" class="grid1">
+			
+			<div class="quick-dial-nav-header">
+				<ul class="quick-dial-nav-tab">
+					<li class="active" style="margin-left:28px;width:65%;">
+						<a href="javascript:void(0);" title="My Favorites">My Favorites</a>
+					</li>
+				</ul>
+			</div>
+			<div class="quick-dial-nav-body">
+				<!-- 我的站点 -->
+				<div id="quick_dial_my_site" class="clearfix">
+					<div id="my_site_nav_list" class="dragable clearfix "></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 添加快速拨号 -->
+	<div id="add_quick_dial" class="a-quick-dial-layer">
+		<div class="a-quick-dial-warp">
+			<header class="a-quick-dial-header clearfix">
+				<ul class="a-quick-dial-tab">
+					<li class="selected">
+						<span class="nav-grid">Suggested Web sites</span>
+					</li>
+					<li>
+						<span class="nav-grid">Custom</span>
+					</li>
+				</ul>
+		        <span class="close">×</span>
+		    </header>
+		    <article class="a-quick-dial-add-list clearfix">
+		    	<ul class="a-quick-dial-nav clearfix">
+					<li class="current" data-code="default">
+						<a href="javascript:void(0);">Featured</a>
+					</li>
+					<li data-code="social">
+						<a href="javascript:void(0);">Social</a>
+					</li>
+					<li data-code="newsmedia">
+						<a href="javascript:void(0);">News&Media</a>
+					</li>
+					<li data-code="shopping">
+						<a href="javascript:void(0);">Shopping</a>
+					</li>
+					<li data-code="tools">
+						<a href="javascript:void(0);">Tools</a>
+					</li>
+				</ul>
+				<div class="a-quick-dial-search">
+					<input id="a_quick_dial_search_btn" name="" type="input" placeholder="Search or Enter URL"/>
+					<span class="a-quick-dial-search-icon"></span>
+				</div>
+				<ul class="a-quick-dial-img-list clearfix"></ul>
+		    </article>
+			 <article class="a-quick-dial-custome-add clearfix" style="display:none;">
+		    	<div class="a-quick-dial-input">
+		    		<label for="url">URL</label>
+					<input name="url" type="input" class="input" placeholder="Enter URL*" autocomplete="off"/>
+					<input name="image" type="hidden" value="" />
+					<input name="colorblock" type="hidden" value="" />
+					<input name="isHot" type="hidden" value=""/>
+					<span class="error">
+						<em>icon</em>
+						<span>请输入标题</span>
+					</span>
+				</div>
+				<div class="a-quick-dial-input">
+					<label for="title">Title</label>
+					<input name="title" type="input" class="input"  placeholder="Enter title"/>
+				</div>
+				<div class="a-quick-dial-input">
+					<label for="style">Custom Style</label>
+					<input type="radio" name="style" class="radio" checked="checked" value="0"/> Image Logo
+					<input type="radio" name="style" class="radio" value="1" /> Color Block
+				</div>
+				<div class="a-quick-dial-input">
+					<div class="a-quick-dial-custome-style">
+						<ul id="screen_shot">
+							<li class="selected">
+								<a href="javascript:void(0);">WebShot</a>
+								<em class="img-item-choose"></em>
+							</li>
+						</ul>
+						<ul id="color_font" class="w900 hide">
+							<li class="color-block-6 selected">
+								<span>Color Words</span>
+							</li>
+							<li class="color-block-5">
+								<span>Color Words</span>
+							</li>
+							<li class="color-block-4">
+								<span>Color Words</span>
+							</li>
+							<li class="color-block-8">
+								<span>Color Words</span>
+							</li>
+							<li class="color-block-1">
+								<span>Color Words</span>
+							</li>
+							<li class="color-block-3">
+								<span>Color Words</span>
+							</li>
+							<li class="color-block-7">
+								<span>Color Words</span>
+							</li>
+							<li class="color-block-2">
+								<span>Color Words</span>
+							</li>
+							<li class="color-block-9">
+								<span>Color Words</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="a-quick-dial-input">
+					<button id="a_quick_dial_add_btn" class="a-quick-dial-add-btn" type="button">添加此项</button>
+				</div>
+		    </article>
+		</div>
+	</div>
+	<!-- 文件夹弹框 -->
+	<div id="folder_quick_dial" class="a-quick-dial-layer">
+		<div class="bar"><span class="title" contenteditable="false">文件夹</span><a class="close">[关闭]</a></div>
+		<div class="a-quick-dial-warp">
+			<article class="a-quick-dial-add-list clearfix">
+				<ul class="a-quick-dial-img-list clearfix"></ul>
+			</article>
+		</div>
+	</div>
+	<!-- 文件夹删除对话框 -->
+	<div id="delete_folder" class="a-quick-dial-layer dialog"></div>
+	<div id="s_skin_layer" class="s-kin-layer">
+		<h4>
+			Change background
+			<a href="javascript:void(0);" class="s-kin-layer-close">×</a>
+		</h4>
+		<ul class="skin-img-list">
+			<li class="skin-img-item" name="defaultlight">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/light.jpg"/> <em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="defaultdark">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/deep.jpg" /><em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="sky">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/sky.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="bridge">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/bridge.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="dandelion">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/dandelion.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="sunrise">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/sundown.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="vintage">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/old.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="nightview">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/night.jpg" />	
+					<em></em>
+				</a>
+			</li>
+			<li class="skin-img-item" name="peace">
+				<a href="javascript:void(0);">
+					<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/grey.gif" mx-src="http://pc-newtab.maxthon.com/v1.1/image/bg/preview/balloon.jpg" />	
+					<em></em>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="s-skin-container s-isindex-wrap"></div>
+	<footer>
+		<button id="s_skin_button" href="javascript:void(0);" class="page-settings" title="Switching background"></button>
+	</footer>
+	<div id="mx_mask_layer" class="mx-mask-layer"></div>
+	<!-- 右键菜单 -->
+	<div id="layers" class="layers">
+		<div class="mx-popup-menu"></div>
+		<div class="mx-drag-div"></div>
+		<div class="mx-swap-div"></div>
+	</div>
+	<script type="text/javascript">
+		var cdnServer = 'http://pc-newtab.maxthon.com/v1.1';
+	</script>
+	<script type="text/javascript" src="http://pc-newtab.maxthon.com/v1.1/i18n/En/data.js"></script>
+	<script src="http://pc-newtab.maxthon.com/v1.1/js/main.min.js?v=1123qwe4r5t6y7u5t8i9o0p"></script>
+</body>
+</html>

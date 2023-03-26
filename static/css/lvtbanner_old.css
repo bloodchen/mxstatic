@@ -1,0 +1,120 @@
+/** 挖矿banner */
+.banner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	background: #de2833;
+	z-index: 103;
+    visibility: hidden;
+    font-family: '微软雅黑';
+}
+/* 
+.banner.en{
+    background: none;
+    background-color: #efefef;
+} */
+.banner-content {
+	position: relative;
+	margin: 0 auto;
+	min-width: 960px;
+	max-width: 1200px;
+	width: 80%;
+	height: 40px;
+	background: url(/static/img/boot_logo/lvt-logo-cn-v1.png) no-repeat;
+	background-size: contain;
+}
+
+.banner-btn-wrapper {
+	position: absolute;
+    right: 6%;
+    bottom: 7px;
+}
+.banner-btn-wrapper a {
+	display: inline-block;
+	padding: 0 20px;
+	width: auto;
+	height: 26px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 26px;
+    cursor: pointer;
+	background: #fff9de;
+    color: #de2833;
+    font-size: 16px;
+}
+
+.en .banner-btn-wrapper a {
+	font-size: 12px;
+	padding: 0 10px;
+}
+.banner-appointment,.banner-appointment:hover {
+	background: none;
+}
+.banner-appointment:hover {
+	background-color: #fceca2;
+}
+
+.banner-collapse {
+	position: absolute;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	background: url(/static/img/boot_logo/lvt-collapse-v1.png) no-repeat;
+	border-radius: 0 0 15px 15px;
+}
+ .banner-collapse:hover {
+	background-image: url(/static/img/boot_logo/lvt-collapse-hover-v1.png?v=24012018);
+}
+/*
+.en .banner-collapse {
+    background-image: url(/static/img/boot_logo/banner-collapse-en.png?v=24012018);
+}
+
+.en .banner-collapse:hover {
+	background-image: url(/static/img/boot_logo/banner-collapse-en-hover.png?v=24012018);
+} */
+
+.banner-build-wrapper {
+	position: absolute;
+	right: 60px;
+	top: 0;
+	width: 0;
+	height: 42px;
+	border-left: 1px solid #ffda97;
+	visibility: visible;
+}
+.banner-build {
+	position: absolute;
+	left: -12px;
+	bottom: -25px;
+	height: 25px;
+	width: 24px;
+	background: url(/static/img/boot_logo/lvt-build.png?v=24012018) bottom no-repeat;
+}
+
+.en .banner-content {
+	background-image: url(/static/img/boot_logo/lvt-logo-en-v1.png);
+}
+
+.visible {
+	visibility: visible;
+}
+.visible .banner-build-wrapper {
+	visibility: hidden;
+}
+
+.ad-text {
+	position: absolute;
+    right: 15px;
+    bottom: 11px;
+    height: 18px;
+    padding: 0 6px;
+    border-radius: 3px;
+    line-height: 18px;
+    font-family: '微软雅黑';
+    font-size: 12px;
+    color: #eecab5;
+    background: rgba(0, 0, 0, .12);  
+}

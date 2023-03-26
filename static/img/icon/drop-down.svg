@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>收起</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="新版标签页_默认页_浅" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1258.000000, -390.000000)">
+        <g id="收起" transform="translate(1258.000000, 390.000000)">
+            <rect id="Rectangle-12" fill="#000000" opacity="0.200000003" x="0" y="0" width="16" height="16" rx="2"></rect>
+            <polygon id="Combined-Shape" fill="#FFFFFF" points="8 8.5 10.6666667 6 12 7.25 8 11 4 7.25 5.33333333 6"></polygon>
+        </g>
+    </g>
+</svg>

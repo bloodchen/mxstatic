@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>列表添加</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="列表添加" fill="#666666">
+            <g id="工具箱_添加" transform="translate(2.000000, 2.000000)">
+                <path d="M6,0 L6,-7.1942452e-14 C5.44771525,-7.18409989e-14 5,0.44771525 5,1 L5,5 L1,5 C0.44771525,5 -2.50086275e-14,5.44771525 -5.58442181e-14,6 L0,6 C6.76353751e-17,6.55228475 0.44771525,7 1,7 L5,7 L5,11 C5,11.5522847 5.44771525,12 6,12 L6,12 C6.55228475,12 7,11.5522847 7,11 L7,7 L11,7 C11.5522847,7 12,6.55228475 12,6 L12,6 C12,5.44771525 11.5522847,5 11,5 L7,5 L7,1 C7,0.44771525 6.55228475,-1.01453063e-16 6,0 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

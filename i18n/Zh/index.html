@@ -1,0 +1,885 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>新标签页</title>
+	<meta name="renderer" content="webkit"/>
+	<link rel="stylesheet" href="../../css/style.min.css?v=295aad63f9">
+</head>
+<body>
+	<div class="quickdial">
+		<div id="hot_nav_list" class="hot-nav clearfix dragable">
+			<ul class="hot-nav-grid hide">
+				<a href="https://www.baidu.com/index.php?tn=maxthon2&ch=2" title="百度" target="_blank">
+					<img src="../../image/logo/Sq/baidu.png" alt="百度" />
+					<span>百度</span>
+				</a>
+			</ul>
+			<ul class="hot-nav-grid hide">
+				<a href="http://go.maxthon.cn/redir/mx4/qa.htm?f=tmall" title="天猫精选" target="_blank">
+					<img src="../../image/logo/Sq/Tmall.png" alt="天猫精选" />
+					<span>天猫精选</span>
+				</a>
+			</ul>
+			<ul class="hot-nav-grid hide">
+				<a href="http://go.maxthon.cn/redir/mx4/qa.htm?f=jd" title="京东" target="_blank">
+					<img src="../../image/logo/Sq/JD.png" alt="京东" />
+					<span>京东</span>
+				</a>
+			</ul>
+			<ul class="hot-nav-grid hide">
+				<a href="http://www.sina.com.cn" title="新浪" target="_blank">
+					<img src="../../image/logo/Sq/sina.png" alt="新浪" />
+					<span>新浪</span>
+				</a>
+			</ul>
+			<ul class="hot-nav-grid hide">
+				<a href="http://www.ifeng.com/#_zbs_maxthon" title="凤凰网" target="_blank">
+					<img src="../../image/logo/Sq/ifeng.png" alt="凤凰网" />
+					<span>凤凰网</span>
+				</a>
+			</ul>
+			<ul class="hot-nav-grid hide">
+				<a href="http://www.youku.com/" title="优酷" target="_blank">
+					<img src="../../image/logo/Sq/youku.png" alt="优酷" />
+					<span>优酷</span>
+				</a>
+			</ul>
+			<ul class="hot-nav-grid hide">
+				<a href="http://i.maxthon.cn/" title="网址导航" target="_blank">
+					<img src="../../image/logo/Sq/i_maxthon.png" alt="网址导航" />
+					<em></em>
+					<span>网址导航</span>
+				</a>
+			</ul>
+		</div>
+		<div id="quick_dial_tabpanels" class="grid1">
+			<div class="quick-dial-nav-header">
+				<ul class="quick-dial-nav-tab">
+					<li class="active">
+						<a href="javascript:void(0);" title="我的站点">我的站点</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" title="推荐站点">推荐站点</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" title="上次未关闭">上次未关闭</a>
+					</li>
+				</ul>
+				<div class="my-site-set-bar">
+					<span class="my-site-view clearfix">
+						<a href="javascript:void(0);" title="大图标模式">大图标模式</a>
+						<a href="javascript:void(0);" title="缩略模式">缩略模式</a>
+					</span>
+				</div>
+			</div>
+			<div class="quick-dial-nav-body">
+				<!-- 我的站点 -->
+				<div id="quick_dial_my_site" class="clearfix">
+					<div id="my_site_nav_list" class="dragable clearfix "></div>
+				</div>
+				<!-- 推荐站点 -->
+				<div id="quick_dial_hot_site" class="clearfix" style="display:none;">
+					<ol class="clearfix">
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx4/qa.htm?f=tmall" title="天猫" target="_blank">
+								<span class="icon">
+									<img src="http://pc-newtab.maxthon.com/image/icon/Tmall.ico" width="16" height="16"  alt="天猫"/>
+								</span>
+								天猫
+							</a>
+						</li>
+						<li>
+							<a href="http://weibo.com/?c=spr_web_yilang_maxthon_weibo_t001" title="新浪微博" target="_blank">
+								新浪微博
+							</a>
+						</li>
+						<li>
+							<a href="http://tv.sohu.com/?lcode=AAAAI8cJIH0zbD_j7vM06mKU-H-ufrd6-IyD4U7nXbj2ixyHWYs9o_-LUX-.cf6&lqd=10217" title="搜狐视频" target="_blank">
+								搜狐视频
+							</a>
+						</li>
+						<li>
+							<a href="http://www.qq.com" title="腾讯" target="_blank">
+								腾讯
+							</a>
+						</li>
+						<li>
+							<a href="http://www.163.com#frp10" title="网易" target="_blank">
+								网易
+							</a>
+						</li>
+						<li>
+							<a href="https://ju.taobao.com/?ali_trackid=2:mm_12431063_4230865_50382321:1466425960_254_874370456" title="聚划算" target="_blank">
+								聚划算
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx4/qa.htm?f=suning" title="苏宁易购" target="_blank">
+								苏宁易购
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx4/qa.htm?f=aitaobao" title="爱淘宝" target="_blank">
+								爱淘宝
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx4/qa.htm?f=amazon" title="亚马逊" target="_blank">
+								亚马逊
+							</a>
+						</li>
+						<li>
+							<a href="http://www.dangdang.com/?_ddclickunion=P-303956-9gongge|ad_type=10|sys_id=1#dd_refer=" title="当当网" target="_blank">
+								当当网
+							</a>
+						</li>
+						<li>
+							<a href="http://r.union.meituan.com/link/hqbdt" title="美团" target="_blank">
+								<span class="icon">
+									<img src="http://pc-newtab.maxthon.com/image/icon/meituan.ico" width="16" height="16"  alt="美团"/>
+								</span>
+								美团
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/public/feature_post.htm?f=qa_nuomi" title="糯米" target="_blank">
+								糯米
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx4/qa.htm?f=vipshop" title="唯品会" target="_blank">
+								唯品会
+							</a>
+						</li>
+						<li>
+							<a href="http://go.maxthon.cn/redir/mx4/qa.htm?f=jumei" title="聚美优品" target="_blank">
+								聚美优品
+							</a>
+						</li>
+						<li>
+							<a href="https://www.ele.me/home/" title="饿了么" target="_blank">
+								饿了么
+							</a>
+						</li>
+						<li>
+							<a href="http://waimai.baidu.com/waimai" title="百度外卖" target="_blank">
+								<span class="icon">
+									<img src="http://pc-newtab.maxthon.com/image/icon/waimai.ico" width="16" height="16"  alt="百度外卖"/>
+								</span>
+								百度外卖
+							</a>
+						</li>
+						<li>
+							<a href="http://www.tuniu.com/?p=13901&cmpid=mkt_03028201&utm_campaign=lifestyle&utm_source=maxthon.cn&utm_medium=referral" title="途牛" target="_blank">
+								途牛
+							</a>
+						</li>
+						<li>
+							<a href="http://www.ctrip.com/?allianceid=18105&sid=449687&ouid=000401app-&utm_medium=&utm_campaign=&utm_source=&isctrip=" title="携程旅行网" target="_blank">
+								携程旅行网
+							</a>
+						</li>
+						<li>
+							<a href="http://p.yiqifa.com/n?k=2mLErntm1NjSrI6H2mLErI6H6Ete1ZLOWEbH1NDOWnUHN5onYyuerZyH2mq869W7W5Py3QLE&spm=1.1.1.1&t=http://t.dianping.com" title="大众点评" target="_blank">
+								大众点评
+							</a>
+						</li>
+						<li>
+							<a href="http://bj.58.com/?utm_source=5uad&utm_campaign=5uad-109" title="58同城" target="_blank">
+								<span class="icon">
+									<img src="http://pc-newtab.maxthon.com/image/icon/58.ico" width="16" height="16"  alt="58同城"/>
+								</span>
+								58同城
+							</a>
+						</li>
+						<li>
+							<a href="http://www.ganji.com/?ca_name=dh_cpc_mingzhan/" title="赶集网" target="_blank">
+								赶集网
+							</a>
+						</li>
+						<li>
+							<a href="http://www.soufun.com/" title="搜房网" target="_blank">
+								搜房网
+							</a>
+						</li>
+						<li>
+							<a href="http://www.autohome.com.cn/?pvareaid=101581" title="汽车之家" target="_blank">
+								汽车之家
+							</a>
+						</li>
+						<li>
+							<a href="http://reg.jiayuan.com/landing_page_new.php" title="世纪佳缘" target="_blank">
+								世纪佳缘
+							</a>
+						</li>
+						<li>
+							<a href="http://www.iqiyi.com/" title="爱奇艺" target="_blank">
+								爱奇艺
+							</a>
+						</li>
+						<li>
+							<a href="http://v.qq.com/" title="腾讯视频" target="_blank">
+								腾讯视频
+							</a>
+						</li>
+						<li>
+							<a href="http://www.eastmoney.com/" title="东方财富" target="_blank">
+								东方财富
+							</a>
+						</li>
+						<li>
+							<a href="http://www.pconline.com.cn/" title="太平洋网" target="_blank">
+								太平洋网
+							</a>
+						</li>
+						<li>
+							<a href="http://www.letv.com/" title="乐视视频" target="_blank">
+								乐视视频
+							</a>
+						</li>
+						<li>
+							<a href="http://www.haha.mx/" title="傲游哈哈" target="_blank">
+								<span class="icon">
+									<img src="http://pc-newtab.maxthon.com/image/icon/haha_mx.ico" width="16" height="16"  alt="傲游哈哈"/>
+								</span>
+								傲游哈哈
+							</a>
+						</li>
+						<li>
+							<a href="http://www.tiexue.net/" title="铁血军事" target="_blank">
+								铁血军事
+							</a>
+						</li>
+						<li>
+							<a href="http://www.4399.com/" title="4399小游戏" target="_blank">
+								4399小游戏
+							</a>
+						</li>
+					</ol>
+					<!-- 热门分类 -->
+					<div class="nav-hot-wrapper clearfix">
+						<div class="container">
+							<h4> <em class="news"></em>
+								新闻
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.xinhuanet.com/" target="_blank">新华网</a>
+								</li>
+								<li>
+									<a href="http://news.163.com/" target="_blank">网易新闻</a>
+								</li>
+								<li>
+									<a href="http://news.sina.com.cn/" target="_blank">新浪新闻</a>
+								</li>
+								<li>
+									<a href="http://news.qq.com/" target="_blank">腾讯新闻</a>
+								</li>
+								<li>
+									<a href="http://news.sohu.com/" target="_blank">搜狐新闻</a>
+								</li>
+								<li>
+									<a href="http://toutiao.com/" target="_blank">今日头条</a>
+								</li>
+								<li>
+									<a href="http://news.ifeng.com/" target="_blank">凤凰资讯</a>
+								</li>
+								<li>
+									<a href="http://www.people.com.cn/" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/people.ico" width="16" height="16"  alt="人民网"/>
+										</span>
+										人民网
+									</a>
+								</li>
+								<li>
+									<a href="http://news.baidu.com/" target="_blank">百度新闻</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4> <em class="gouwu"></em>
+								购物
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.taobao.com" target="_blank">淘宝</a>
+								</li>
+								<li>
+									<a href="http://www.jd.com" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/JD.ico" width="16" height="16"  alt="京东"/>
+										</span>
+										京东
+									</a>
+								</li>
+								<li>
+									<a href="http://www.tmall.com" target="_blank">天猫</a>
+								</li>
+								<li>
+									<a href="http://www.yohobuy.com" target="_blank">YOUO有货</a>
+								</li>
+								<li>
+									<a href="http://www.iliangcang.com" target="_blank">良仓</a>
+								</li>
+								<li>
+									<a href="http://www.yougou.com" target="_blank">优购</a>
+								</li>
+								<li>
+									<a href="http://www.smzdm.com" target="_blank">什么值得买</a>
+								</li>
+								<li>
+									<a href="http://www.gome.com.cn" target="_blank">国美在线</a>
+								</li>
+								<li>
+									<a href="http://www.ikea.com/cn/zh/" target="_blank">宜家</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4>
+								<em class="yule"></em>
+								搞笑
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.haha.mx/" target="_blank">傲游哈哈</a>
+								</li>
+								<li>
+									<a href="http://www.qiushibaike.com/" target="_blank">糗事百科</a>
+								</li>
+								<li>
+									<a href="http://tu.duowan.com/tu" target="_blank">多玩图库</a>
+								</li>
+								<li>
+									<a href="http://bbs.voc.com.cn/" target="_blank">华声论坛</a>
+								</li>
+								<li>
+									<a href="http://baozoumanhua.com/" target="_blank">暴走漫画</a>
+								</li>
+								<li>
+									<a href="http://www.budejie.com/" target="_blank">百思不得姐</a>
+								</li>
+								<li>
+									<a href="http://www.mahua.com/" target="_blank">快乐麻花</a>
+								</li>
+								<li>
+									<a href="http://bohaishibei.com/" target="_blank">博海拾贝</a>
+								</li>
+								<li>
+									<a href="http://jandan.net/" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/jiandan.ico" width="16" height="16"  alt="煎蛋"/>
+										</span>
+										煎蛋
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4>
+								<em class="zixun"></em>
+								资讯
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.36kr.com/" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/36kr.ico" width="16" height="16"  alt="36kr"/>
+										</span>
+										36kr
+									</a>
+								</li>
+								<li>
+									<a href="http://www.huxiu.com" target="_blank">虎嗅网</a>
+								</li>
+								<li>
+									<a href="http://www.zhuaxia.com" target="_blank">抓虾</a>
+								</li>
+								<li>
+									<a href="http://www.xianguo.com" target="_blank">鲜果网</a>
+								</li>
+								<li>
+									<a href="http://wallstreetcn.com" target="_blank">华尔街见闻</a>
+								</li>
+								<li>
+									<a href="http://www.pingwest.com" target="_blank">PingWest</a>
+								</li>
+								<li>
+									<a href="http://www.geekpark.com" target="_blank">极客公园</a>
+								</li>
+								<li>
+									<a href="http://www.ftchinese.com" target="_blank">FT中文网</a>
+								</li>
+								<li>
+									<a href="http://www.tmtpost.com" target="_blank">钛媒体</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4>
+								<em class="shequ"></em>
+								社区
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.zhihu.com" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/zhihu.ico" width="16" height="16"  alt="知乎"/>
+										</span>
+										知乎
+									</a>
+								</li>
+								<li>
+									<a href="http://www.douban.com" target="_blank">豆瓣</a>
+								</li>
+								<li>
+									<a href="http://www.guokr.com" target="_blank">果壳</a>
+								</li>
+								<li>
+									<a href="http://www.mop.com" target="_blank">猫扑</a>
+								</li>
+								<li>
+									<a href="http://www.tianya.cn" target="_blank">天涯</a>
+								</li>
+								<li>
+									<a href="http://www.renren.com" target="_blank">人人</a>
+								</li>
+								<li>
+									<a href="http://www.kanxin001.com" target="_blank">开心网</a>
+								</li>
+								<li>
+									<a href="http://www.jianshu.com" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/jianshu.ico" width="16" height="16"  alt="简书"/>
+										</span>
+										简书
+									</a>
+								</li>
+								<li>
+									<a href="http://www.newsmth.net" target="_blank">水木社区</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4>
+								<em class="service"></em>
+								服务
+							</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.58.com" target="_blank">58同城</a>
+								</li>
+								<li>
+									<a href="http://www.ganji.com" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/ganji.ico" width="16" height="16"  alt="赶集网"/>
+										</span>
+										赶集网
+									</a>
+								</li>
+								<li>
+									<a href="http://www.fang.com" target="_blank">房天下</a>
+								</li>
+								<li>
+									<a href="http://www.lianjia.com" target="_blank">链家</a>
+								</li>
+								<li>
+									<a href="http://5i5j.com" target="_blank">我爱我家</a>
+								</li>
+								<li>
+									<a href="http://www.icbc.com.cn" target="_blank">工商银行</a>
+								</li>
+								<li>
+									<a href="http://www.ccb.com" target="_blank">建设银行</a>
+								</li>
+								<li>
+									<a href="http://www.bankcomm.com" target="_blank">交通银行</a>
+								</li>
+								<li>
+									<a href="http://www.cmbchina.com" target="_blank">招商银行</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4><em class="game"></em>游戏</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.4399.com" target="_blank">4399小游戏</a>
+								</li>
+								<li>
+									<a href="http://www.duowan.com" target="_blank">多万</a>
+								</li>
+								<li>
+									<a href="http://www.gamersky.com" target="_blank">游民星空</a>
+								</li>
+								<li>
+									<a href="http://www.tgbus.com" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/tgbus.ico" width="16" height="16"  alt="电玩巴士"/>
+										</span>
+										电玩巴士
+									</a>
+								</li>
+								<li>
+									<a href="http://www.ali213.net" target="_blank">游侠网</a>
+								</li>
+								<li>
+									<a href="http://www.17173.com" target="_blank">17173</a>
+								</li>
+								<li>
+									<a href="http://www.3dmgame.com" target="_blank">3DMGAME</a>
+								</li>
+								<li>
+									<a href="http://www.a9vg.com/" target="_blank">电玩部落</a>
+								</li>
+								<li>
+									<a href="http://lol.qq.com/" target="_blank">英雄联盟</a>
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4><em class="read"></em>阅读</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.qidian.com/" target="_blank">起点中文网</a>
+								</li>
+								<li>
+									<a href="http://ebook.qq.com/" target="_blank">腾讯文学</a>
+								</li>
+								<li>
+									<a href="http://www.zongheng.com/" target="_blank">纵横中文网</a>
+								</li>
+								<li>
+									<a href="http://www.xxsy.net/" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/xxsy.ico" width="16" height="16"  alt="潇湘书院"/>
+										</span>
+										潇湘书院
+									</a>
+								</li>
+								<li>
+									<a href="http://www.hongxiu.com/" target="_blank">红袖添香</a>
+								</li>
+								<li>
+									<a href="http://yanqing.readnovel.com/" target="_blank">小说阅读网</a>
+								</li>
+								<li>
+									<a href="http://book.sina.com.cn/" target="_blank">新浪读书</a>
+								</li>
+								<li>
+									
+								</li>
+								<li>
+									
+								</li>
+							</ul>
+						</div>
+						<div class="container">
+							<h4><em class="other"></em>其他</h4>
+							<ul class="clearfix">
+								<li>
+									<a href="http://www.panda.tv/" target="_blank">熊猫TV</a>
+								</li>
+								<li>
+									<a href="http://www.douyu.tv" target="_blank">斗鱼TV</a>
+								</li>
+								<li>
+									<a href="http://www.autohome.com.cn" target="_blank">汽车之家</a>
+								</li>
+								<li>
+									<a href="http://www.zhenai.com" target="_blank">珍爱网</a>
+								</li>
+								<li>
+									<a href="http://www.eastmoney.com" target="_blank">东方财富</a>
+								</li>
+								<li>
+									<a href="http://www.qiushibaike.com" target="_blank">糗事百科</a>
+								</li>
+								<li>
+									<a href="http://www.zhibo8.cc" target="_blank">直播吧</a>
+								</li>
+								<li>
+									<a href="http://www.lagou.com" target="_blank">
+										<span class="icon">
+											<img src="http://pc-newtab.maxthon.com/image/icon/lagou.ico" width="16" height="16"  alt="拉勾网"/>
+										</span>
+										拉勾网
+									</a>
+								</li>
+								<li>
+									<a href="http://www.zhaopin.com" target="_blank">智联招聘</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 上次访问-->
+				<div id="quick_dial_last_visite" class="clearfix" style="display:none;">
+					<button id="open_all_visite_link">全部打开</button>
+					<ul class="visite-list clearfix"></ul>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 右键菜单 -->
+		<div id="layers" class="layers">
+			<div class="mx-popup-menu"></div>
+			<div class="mx-drag-div" style="position:absolute;"></div>
+			<div class="mx-swap-div" style="position:absolute;"></div>
+		</div>
+	</div>
+	
+	<!-- 添加快速拨号 -->
+	<div id="add_quick_dial" class="a-quick-dial-layer">
+		<div class="a-quick-dial-warp">
+			<div class="a-quick-dial-header clearfix">
+				<div class="a-quick-dial-header-l">
+					<label for="url">
+						<input name="url" type="input" placeholder="请输入网址" autocomplete="off"/>	
+					</label>
+					<label for="title">
+						<input name="title" type="input" placeholder="请输入标题"/>	
+					</label>
+					<span class="error">
+						<em>icon</em>
+						<span>请输入标题</span>
+					</span>
+				</div>
+				<div class="a-quick-dial-header-r">
+					<div class="a-quick-dial-upload-warp">
+						<div class="a-quick-dial-upload">
+							<button> + 上传图片 </button>
+							<input type="file" name="uploadBtn" id="dial_upload_btn"/>
+							<img src="" alt="" width="122" height="52" style="display:none;background-color:#e1e2e2;"/>	
+						</div>
+						<span>推荐179*78或96*96</span>
+					</div>
+					<button id="a_quick_dial_add_btn" class="a-quick-dial-add-btn" type="button">添加此项</button>
+				</div>
+				<span class="a-quick-dial-close">×</span>
+			</div>
+			<div class="a-quick-dial-body clearfix">
+				<ul class="a-quick-dial-nav clearfix">
+					<li class="current">
+						<a href="javascript:void(0);" datacode="featured">热门网址</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" datacode="news">新闻资讯</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" datacode="video">影视频道</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" datacode="shopping">网上购物</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" datacode="socio">社交网络</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" datacode="read">文学小说</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" datacode="amuse">游戏娱乐</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);" datacode="local">生活服务</a>
+					</li>
+				</ul>
+				<div class="a-quick-dial-search">
+					<input id="a_quick_dial_search_btn" name="" type="input" placeholder="查找网站"/>
+					<span class="a-quick-dial-search-icon"></span>	
+				</div>
+			</div>
+			<ul class="a-quick-dial-img-list clearfix"></ul>
+		</div>
+	</div>
+	<div id="s_skin_layer" class="s-kin-layer">
+			<h4>
+				选择背景
+				<a href="javascript:void(0);" class="s-kin-layer-close">×</a>
+			</h4>
+			<ul class="skin-img-list">
+				<li class="skin-img-item">
+					<a href="javascript:void(0);">
+						<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/bg/blue.jpg" /> <em></em>
+					</a>
+				</li>
+				<li class="skin-img-item">
+					<a href="javascript:void(0);">
+						<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/bg/bg-1.png" /><em></em>
+					</a>
+				</li>
+				<li class="skin-img-item">
+					<a href="javascript:void(0);">
+						<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/bg/halo.jpg" />	
+						<em></em>
+					</a>
+				</li>
+				<li class="skin-img-item">
+					<a href="javascript:void(0);">
+						<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/bg/hills.jpg" />	
+						<em></em>
+					</a>
+				</li>
+				<li class="skin-img-item">
+					<a href="javascript:void(0);">
+						<img class="skin-img-item-img" src="http://pc-newtab.maxthon.com/image/bg/still.jpg" />	
+						<em></em>
+					</a>
+				</li>
+			</ul>
+	</div>
+	<div class="s-skin-container s-isindex-wrap"></div>
+	<footer>
+		<button id="s_skin_button" href="javascript:void(0);" class="page-settings" title="切换背景"></button>
+	</footer>
+	<div id="mx_mask_layer" class="mx-mask-layer"></div>
+	<script type="text/javascript" src="../../i18n/Zh/data.js"></script>
+	<script src="../../js/main.min.js?v=411997fbb4"></script>
+	<script type="text/javascript">
+		 $(function(){
+
+		 	if((external && external.max_version) != '5.0.1.300') {  // 非此版本略过
+		 		return ;
+		 	}
+
+		 	if(!!localStorage.hongbaoFlag) { //判断客户端是否已经弹出过红包
+		 		return ;
+		 	}
+
+		 	if (typeof (external.AuthRequest) === "function") {
+		        var va = {
+		            appid: '1000000004',
+		            appkey: 't51wz550o07h9ui8d0r6e1fs9estn4qy'
+		        };
+		        external.AuthRequest(va, function (e) {
+		            if (typeof (e) !== 'object') {
+		                return;
+		            }
+		            if (e.error_code === 0) {
+
+		                $.ajax({
+						  url: '/api/hongbao/?uid=' + e.user_id,
+						  data: {},
+						  dataType: 'json',
+						  success: function(result) {
+
+						  	if(result.status && result.status.code === "200") {
+
+						  		$mx_mask_layer.css({'background-color':'#270a19','opacity':'0.8'}).show();
+
+							 	var single = (function() {
+							 		
+
+								 	function append_style() {
+								 		var $style = $('#activity');
+
+								 		if($style[0]) {
+								 			return $style;
+								 		}
+
+										var cssText = [];
+									 	cssText.push('#activity_pop{width:500px;height:450px;position:fixed;left:50%;top:50%;margin-left:-250px;margin-top:-225px; background:url("http://pc-newtab.maxthon.com/image/tmp/packets.png");z-index:999;}');
+									 	cssText.push('#activity_pop>a{ position: absolute;right: 80px;top: 0px;background: #e81e5c;color: #fff;border-radius: 20px;width: 30px;height: 30px;font-size: 20px;text-align: center;}');
+									 	cssText.push('#activity_pop>button{position: absolute;bottom: 60px;left: 50%;margin-left: -122px;background: #7e5eff;border-radius: 30px;padding: 10px 20px;color: #fff;font-family: "华文圆体";font-size: 24px;}');
+									 	cssText.push('#activity_pop>button:hover{background:#9074ff;}');
+									 	cssText.push('#comfirm_pop {position: fixed;width: 400px; height: 140px;z-index: 999;background: #ffe9ed;left: 50%;top: 50%;margin-left: -200px;margin-top: -95px;border-radius: 5px;padding-top:50px;}');
+									 	cssText.push('#comfirm_pop p{text-align:center; margin-bottom:30px;color:#f7608e; font-size:24px; font-family:"华文圆体"}');
+									 	cssText.push('#comfirm_pop p button {font-size:16px;border-radius:20px;padding:8px 30px; background-color:#f2c6ce;color: #d0486f;font-family:"微软雅黑";}');
+									 	cssText.push('#comfirm_pop p button.selected {background-color:#f4326e;color:#fff;}');
+									 	cssText.push('#comfirm_pop p button:hover{background:#fddce2;}');
+									 	cssText.push('#comfirm_pop p button.selected:hover {background-color:#fe4c83;color:#fff;}');
+									 	$style = $("<style id=\"activity\"></style>").text(cssText.join('')).appendTo($("head"));
+
+								 		return $style;
+								 	}
+
+								 	append_style();
+
+							 		function get_activity_pop() {
+							 			
+							 			var $activity_pop = $('#activity_pop');
+
+							 			if($activity_pop[0]) {
+							 				return $activity_pop;
+							 			}
+
+						 				$activity_pop = $(['<div id="activity_pop">',
+								 			'<a href="javascript:void(0);">×</a>',
+								 			'<button>点我领取女神红包</button>',
+								 		'</div>'].join(''));
+								 		$activity_pop.insertAfter($mx_mask_layer);
+
+									 	return $activity_pop;
+							 		}
+
+							 		function get_comfirm_pop() {
+
+							 			var $comfirm_pop = $('#comfirm_pop');
+
+							 			if($comfirm_pop[0]) {
+							 				return $comfirm_pop;
+							 			}
+
+						 				$comfirm_pop = $(['<div id="comfirm_pop">\
+ 											<p>不再领取女神红包</p>\
+ 											<p><button>确认</button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="selected">取消</button></p>\
+ 										</div>'].join(''));
+								 		$comfirm_pop.insertAfter($mx_mask_layer);
+
+									 	return $comfirm_pop;
+							 		}
+
+							 		return {
+							 			activity_pop : get_activity_pop,
+							 			comfirm_pop : get_comfirm_pop,
+							 			append_style : append_style
+							 		};
+							 	})();
+
+							 	single.activity_pop().find('>a').click(function() {
+
+							 		single.activity_pop().hide();
+							 		single.comfirm_pop().show().find('p>button').click(function() {
+							 			
+							 			 if($(this).text() === '确认') {
+							 			 	single.comfirm_pop().remove();
+							 			 	single.activity_pop().remove();
+							 			 	$mx_mask_layer.removeAttr('style');
+							 			 } else {
+							 			 	single.comfirm_pop().hide();
+							 			 	single.activity_pop().show();
+							 			 }
+							 		});
+							 		
+							 	}).end()
+							 	.find('>button').click(function() {
+							 		var a = $('<a href="' + result.data.url + '" target="_blank"></a>').get(0);
+				                    var e = document.createEvent('MouseEvents');
+				                    e.initEvent('click', true, true);
+				                    a.dispatchEvent(e);
+
+				                    single.comfirm_pop().remove();
+					 			 	single.activity_pop().remove();
+					 			 	single.append_style().remove();
+					 			 	$mx_mask_layer.removeAttr('style');
+							 	});
+
+							 	localStorage.hongbaoFlag = true;
+						  	} else {
+
+						  	}
+						  },
+						  error: function() {
+						  	
+						  }
+						});
+		            }
+		        });
+		    }
+		 });
+	</script>
+</body>
+</html>

@@ -1,0 +1,817 @@
+/**
+ *  快速拨号前台页面
+ *  @author  guotingjie@maxthon.net
+ */
+body, div, p, ul, ol, li {
+	padding: 0;
+	margin: 0;
+}
+body {
+	-webkit-user-select: none;
+	font-family: "Segoe UI",Tahoma,Geneva,Verdana,"Microsoft YaHei", Helvetica, Tahoma, Arial;
+	font-size: .875em;
+	padding-left: calc(100vw - 100%);
+	overflow-x: hidden;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+button {
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+strong {
+	cursor: default;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+	outline: none;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.hide{
+	display: none;
+}
+
+em.img-item-choose {
+	position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 20px;
+    height: 20px;
+    background: #fff url(../image/icon/union.png?v=1.6) no-repeat -5px -65px;
+    display: none;
+}
+
+.quickdial {
+	width: 85%;
+	max-width: 1200px;
+	min-width: 900px;
+	margin: 165px auto 100px;
+}
+
+#hot_nav_list { width: 104%;margin-left: -2.5%;}
+.hot-nav-grid {float: left;width: 12.5%;}
+
+.hot-nav-grid > a , .hot-nav-grid .grid-empty {
+	display: block;
+	text-align: center;
+	height: 0;
+	padding-bottom: 54%;
+	width: 54%;
+	border-radius: 10px;
+	margin: 0 auto;
+	background-size: cover;
+	box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.grid-empty{  background-color: rgba(255,255,255,0.8);padding-bottom: 70%; position: relative;}
+.empty .grid-empty {background-color: rgba(255,255,255,0.5);}
+.grid-empty > a {
+    top: 50%;
+    left: 50%;
+    width: 42px;
+    height: 42px;
+    margin: -21px;
+	position: absolute;
+	padding: 0px;
+	background: url(../image/icon/union.png?v=1.6) no-repeat -3px -115px;
+    text-indent: -999px;
+	overflow: hidden;
+}
+.hot-nav-grid .grid-empty > a {background-position: -2px -191px;}
+
+.hot-nav-grid img,.hot-nav-grid .color-block, .hot-nav-grid.add > a, .hot-nav-grid .grid-empty {
+	width: 54%; 
+	max-width: 100px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hot-nav-grid .color-block {
+    font-size: 40px;
+    overflow: hidden;
+	padding: 50% 0;
+	width: 100%;
+	height: 0;
+	line-height: 4%;
+}
+
+.hot-nav-grid .color-block > span{line-height: 0px;}
+
+.hot-nav-grid:hover {
+	transform: scale(1.08, 1.08);
+    transition: .3s transform;
+}
+
+.empty:hover {transform: scale(1.0, 1.0);}
+
+.hot-nav-grid > a > span {
+	display: none;
+}
+
+#quick_dial_tabpanels {
+    padding-top: 40px;
+}
+
+.quick-dial-nav-header {width: 99%;}
+.quick-dial-nav-body {position: relative;left: 1px;top: 20px;}
+.quick-dial-nav-tab{overflow: hidden;margin: 0 auto; width: 18%;}
+.quick-dial-nav-tab li{
+	float: left;
+	text-align: center;
+	/*height: 40px;*/
+	line-height: 40px;
+	/*padding: 0px 20px;*/
+	width: 50%;
+	font-size: 1.0em;
+}
+
+.quick-dial-nav-tab li > a {
+	/*display: inline-block;
+	width: 65%;
+	height: 100%;*/
+	padding-bottom: 8px;
+	color: #000;
+	opacity: 0.5;
+}
+
+/*.quick-dial-nav-tab li.active {
+	background-color: rgba(255, 255, 255, 0.5);
+}*/
+
+.quick-dial-nav-tab li.active > a{
+	color: #333;
+	/* 解决点击出现外边框的问题 */
+	outline:medium;
+	border-bottom: 1px solid #333;
+	opacity: 1;
+}
+#quick_dial_hot_site a:hover{ color: #0080ff;}
+#quick_dial_hot_site > ol {background-color: #fff;opacity: 0.85;}
+#quick_dial_hot_site > ol > li {
+	border-right: 1px solid rgba(0,0,0,0.06);
+	border-bottom: 1px solid rgba(0,0,0,0.06);
+    box-sizing: border-box;
+    float: left;
+    height: 50px;
+    opacity: 0.85;
+    position: relative;
+    width: calc((100%) / 8);
+    text-align: center;
+}
+
+#quick_dial_hot_site > ol > li:nth-child(8n) {
+	border-right: none;
+}
+
+#quick_dial_hot_site > ol > li > a {
+    line-height: 50px;
+}
+
+#quick_dial_hot_site .icon > img {vertical-align: middle;position: relative;top: -1px;}
+/** 新闻分类 */
+.nav-hot-wrapper {
+	opacity: 0.85;
+	margin-top: 30px;
+	background-color: #fff;
+	margin-bottom: 100px;
+}
+
+.nav-hot-wrapper > .container {
+	float: left;
+	padding: 0 0 2% 3%;
+	width: 30%;
+	border-right: 1px solid #edeeef;
+	border-bottom: 1px solid #edeeef;
+}
+
+.nav-hot-wrapper > .container:nth-child(3n) {
+	border-right: none;
+}
+
+.nav-hot-wrapper > .container h4 {
+	color: #0065CC;
+	font-weight: normal;
+	height: 20px;
+	line-height: 20px;
+}
+
+.nav-hot-wrapper > .container em {
+	background-repeat: no-repeat;
+	background-image: url("../image/icon/union.png?v=1.6");
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 8px;
+}
+
+.container em.news {
+	background-position: -4px -30px;
+}
+.container em.gouwu{
+	background-position: -32px -32px;
+}
+.container em.yule{
+	background-position: -60px -31px;
+}
+.container em.zixun{
+	background-position: -87px -30px;
+}
+.container em.shequ{
+	background-position: -116px -31px;
+}
+.container em.service{
+	background-position: -144px -31px;
+}
+.container em.game{
+	background-position: -172px -32px;
+}
+.container em.read{
+	background-position: -229px -32px;
+}
+.container em.other{
+	background-position: -200px -30px;
+}
+.nav-hot-wrapper > .container li {
+	float: left;
+	width: 30%;
+	line-height: 26px;
+}
+
+/**
+ * 我的站点
+ */
+.my-site-grid {
+	box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.1);
+    float: left;
+    margin: 0 1.7% 2% 0;
+	position: relative;
+   /*  width: calc((100% - 30px) / 5); */
+   width: 15%;
+   height: 0px;
+   padding-bottom: 10%;
+   overflow: hidden;
+   top:0;
+   border-radius: 3px;
+}
+
+.my-site-grid:hover{
+	box-shadow: 0 8px 20px rgba(0,0,0,.3);
+	transition: box-shadow .2s ease-in, top .15s ease-in;
+	top:-2px;
+}
+
+.my-site-grid:nth-child(6n) {
+	margin-right: 0px;
+}
+
+.my-site-thumbnail-container{
+	height: 0;
+	background-image: linear-gradient(-180deg, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.70) 100%);
+	border: 1px solid rgba(0,0,0,0.30);	
+	cursor: pointer;
+	padding-bottom: 67%;
+	overflow: hidden;
+}
+
+.my-site-thumbnail-container .loading {
+	background: #fff url(/image/loading_x1.gif) no-repeat center center;
+}	
+.my-site-thumbnail {
+	width: 40%;
+	height: 0;
+	margin-left: 6.5%;
+	margin-top: 4.5%;
+	background-size:cover;
+	text-align: center;
+	line-height: 40%;
+	overflow: hidden;
+	padding-bottom: 26%;
+	float: left;
+	position: relative;
+}
+.my-site-thumbnail>span{position: absolute;text-overflow: ellipsis;white-space: nowrap;left: 50%;top: 50%;margin-left: -45%;margin-top: -15px;width: 90%; overflow: hidden;height: 30px;line-height: 30px;}
+.my-site-grid > a {display: block;height: 0; width: 100%;text-align: center;border: none;overflow: hidden;padding-bottom: 70%;}
+.my-site-grid > a > img {width: 100%;height: auto;box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);}
+.my-site-mask {width: 93.6%; margin: 3.2% 3.2%; padding-bottom: 60%; height: 0px; background-size: cover;}
+/** 截图loading */
+.my-site-grid.loading > a , .hot-nav-grid.loading > a{background: #fff url(/image/loading.gif) no-repeat center center;}
+.my-site-grid.loading  > a > img {visibility: hidden;}
+.my-site-nav {text-align: left;overflow: hidden; color: #fff;background-color: #000;font-size: 12px;position: absolute;bottom: 0px; width: 100%;height: 0px;line-height: 24px;}
+.my-site-grid:hover .my-site-nav {display: block;opacity: 0.7;cursor: pointer;height: 24px;transition: height 0.3s;}
+.my-site-nav .title{float: left;margin-left: 10px;font-weight: normal;width: 46%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;cursor: pointer;}
+.my-site-nav button{position: absolute;width:18px;height:18px;text-indent: -99px;background: url(../image/icon/union.png?v=1.6) 0px 0px no-repeat #000;top: 4px;overflow: hidden;}
+.my-site-nav button.delete{right: 5px;background-position: -4px -6px;}
+.my-site-nav button.delete:hover{background-position: -83px -6px;}
+.my-site-nav button.edit{right:27px;background-position: -32px -6px;}
+.my-site-nav button.edit:hover{background-position: -111px -6px;}
+.my-site-nav button.refresh{right:51px;background-position: -60px -6px;}
+.my-site-nav button.refresh:hover{background-position: -139px -6px;}
+.my-site-title-text {text-align: center;font-size: 12px;color: #666666;text-overflow : ellipsis;white-space : nowrap;overflow : hidden;}
+.my-site-grid .color-block {font-size: 20px;width: 60%;overflow:hidden; text-overflow: ellipsis;white-space: nowrap;position: absolute;left: 50%;top: 50%;margin-top: -13.5px;margin-left: -30%;}
+
+.color-block-1{background-color: #00BD9C;color: #fff;}
+.color-block-2{background-color: #1FCE6D;color: #fff;}
+.color-block-3{background-color: #E87E04;color: #fff;}
+.color-block-4{background-color: #E94B35;color: #fff;}
+.color-block-5{background-color: #2C97DE;color: #fff;}
+.color-block-6{background-color: #ffffff;color: #545454;}
+.color-block-7{background-color: #33495F;color: #fff;}
+.color-block-8{background-color: #94A5A6;color: #fff;}
+.color-block-9{background-color: #9C56B8;color: #fff;}
+.my-site-grid.loading .my-site-nav,.my-site-grid.loading .color-block,.my-site-grid.loading .my-site-mask { visibility: hidden; }
+
+/** 右键菜单-begin */
+.mx-popup-menu{
+    position:absolute;
+    z-index:999;
+    top:-9999px;
+    left:-9999px;
+}
+.mx-popup-menu ul{
+    border:1px solid #bbb;
+    background:#FFFFFF ;
+    padding:2px 0px 2px 0px;
+    box-shadow:1px 1px 6px rgba(0,0,0,.2);
+    overflow:hidden;
+    min-width: 150px;
+}
+.mx-popup-menu ul li{
+    float:left;
+    clear:both;
+    width : 100%;
+    cursor:pointer;
+    z-index: 103;
+}
+.mx-popup-menu .mx-menu-item-icon {
+    width: 22px;
+    height: 22px;
+    float: left;
+    padding:3px 0px 2px 0px;
+}
+.mx-popup-menu .mx-menu-item-title {
+    display: inline-block;
+    padding:3px 20px 2px 2px;
+    height:22px;
+    line-height:22px;
+    font-size:12px;
+}
+
+.mx-popup-menu .mx-menu-item-disabled{
+    color:#D3D3D3;
+}
+
+.mx-popup-menu .mx-menu-item-separator{
+    height: 1px;
+	border: 1px dotted #C7C7C7;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+    width:100%;
+    margin: 2px 0 2px 0;
+}
+
+.mx-popup-menu .mx-menu-item:hover{
+    background-color : #e5f3fe;
+}
+
+.mx-mask-layer {
+	display: none;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0.4;
+	position: fixed;
+	transition: opacity 0.3s;
+    z-index: 11;
+}
+.face-out {opacity: 0.6;}
+.mx-drag-div, .mx-swap-div {display: none; overflow: hidden;background-color: rgba(0,0,0,0); }
+.layers .my-site-grid::before,.mx-swap-div::before{content: "";position: absolute;top: 0;right: 0;bottom: 0;left: 0;transition: background-color 0.3s;z-index: 1000;}
+.mx-drag-div.is-current-target .my-site-grid::before{ background: rgba(0, 0, 0, 0.4) url(../image/swap_icon.gif) no-repeat 6px 6px;}
+.layers .zoom-in .my-site-grid { transform: scale(0.92, 0.92); transition: transform .5s;}
+.layers .zoom-out .folder {width: 95%;height: 90%;padding: 2.5%;}
+.mx-swap-div.zoom-out  { background-color: rgba(0,0,0, 0.5); }
+.mx-swap-div.zoom-out::before {background-color: rgba(0,0,0,0.6);}
+.mx-swap-div.zoom-out .my-site-grid > a{width: 90%;height: 90%;margin-left: -45%;margin-top: -29.5%;position: relative;top: 50%;left: 50%;padding-bottom: 0px;transition: width .5s,height .5s;}
+.mx-drag-div li, .mx-swap-div li{ width: 100%; height: 100%; }
+.mx-swap-div.folder > li {border: 2px solid rgba(245,245,245,.8); background-color: #36454e;}
+.mx-swap-div.folder > li > a,.mx-swap-div.folder > li .my-site-thumbnail-container {width: 170px;height: 110px;margin: 3px 0 0 3px;opacity: 0.7;padding: 0px;}
+.mx-swap-div.zoom-out .folder {width:100%; height:100%;}
+.mx-swap-div.zoom-out .my-site-thumbnail-container {width: 90%;padding-bottom: 60%;margin:1% 2.5%;}
+
+/** 右键菜单-end */
+
+/** 背景透明时的样式 */
+.transparent .quick-dial-nav-tab li>a {color: #fff; opacity: 0.5}
+.transparent .quick-dial-nav-tab li.active > a { border-bottom-color: #fff; opacity: 1;}
+.transparent .my-site-thumbnail-container{background-color: rgba(255,255,255,.3); border: 1px solid rgba(255,255,255,0.15); background-image: none;}
+/**fix bug */
+.transparent .mx-swap-div .no-img {position: static;}
+/** 添加快速拨号 begin */
+
+.a-quick-dial-layer {
+	display: none;
+	width: 948px;
+	height: 410px;
+	box-shadow: 0 5px 40px rgba(0, 0, 0, .45);
+	position: fixed;
+	background-color: rgba(255,255,255,0.85);
+	z-index: -1;
+	opacity: 0;
+	-webkit-transition-property: none;
+	-webkit-transition-duration: .1s;
+	border-radius: 4px;
+	margin: -205px 0px 0px -479px;
+	left: 50%;
+	top: 50%;
+}
+
+.a-quick-dial-warp {
+	position: relative;
+}
+
+.a-quick-dial-header {
+	border-bottom: 1px solid #ccc;
+    height: 47px;
+    line-height: 47px;
+    overflow: hidden;
+}
+.a-quick-dial-header .a-quick-dial-tab{
+	margin: 0 auto;
+	width: 300px;
+	text-align: center;
+	font-size: 15px;
+	height: 100%;
+	background-color: transparent;
+	color: #999;
+	cursor: pointer;
+}
+.a-quick-dial-header li {
+	float: left;
+	width: 100px;
+	height: 46px;
+	margin-left: 20px;
+}
+
+.a-quick-dial-header .selected {
+	color: #0062CF;
+	/*font-weight: 600;*/
+	border-bottom: 1px solid #0062CF;
+}
+
+.a-quick-dial-custome-add{
+	margin: 30px auto 30px 175px;
+}
+.a-quick-dial-input {
+	overflow: hidden;
+	line-height: 32px;
+	color: #666;
+	position: relative;
+}
+.a-quick-dial-input label, .a-quick-dial-input .input{
+	float: left;
+	height: 32px;
+	line-height: 32px;
+}
+
+.a-quick-dial-input label{
+	text-align: right;
+	width: 100px;
+	font-weight: 700;
+	color: #333;
+}
+
+.a-quick-dial-input .input{
+	padding:0px 15px;
+	width: 410px;
+	color: #999;
+	background-color: #fff;
+	border: 1px solid #ccc; 
+	margin: 0px 0px 10px 15px;
+	font-size: 12px;
+    font-family: "微软雅黑";
+    outline: none;
+	line-height: 34px;
+}
+.a-quick-dial-input .input:focus{
+	border-color: #007cff;
+}
+
+.a-quick-dial-input .radio{
+	margin:10px 0px 0px 15px;
+}
+.a-quick-dial-input .number{color: red;}
+
+.a-quick-dial-custome-style {margin:10px 0px 0px 115px;width:480px;overflow: auto;padding-bottom: 10px;height: 110px;}
+.a-quick-dial-custome-style ul {overflow: hidden;}
+.a-quick-dial-custome-style ul.w900{width: 1350px;}
+.a-quick-dial-custome-style li {float: left;text-align: center;margin-right: 20px;font-family: "微软雅黑";height: 90px;line-height: 90px;
+cursor: pointer;position: relative;}
+.a-quick-dial-custome-style li.selected:after{
+	content: "#";
+	position: absolute;
+	right: 0px;
+	bottom: 2px;
+	width: 20px;
+	height: 20px;
+	background: #fff url(../image/icon/union.png?v=1.6) no-repeat -5px -65px;
+}
+.a-quick-dial-custome-style li>ins{display: none;}
+.a-quick-dial-custome-style li.commend>ins {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background-color: #df3737;
+	line-height: 12px;
+	font-size: 12px;
+	color: #fff;
+	padding: 4px 8px;
+	display: block;
+	text-decoration: none;
+}
+
+/* 网站logo */
+#screen_shot li{}
+#screen_shot a {display: block;width: 130px;height: 87px;background: url(/v1.1/image/screenshot.png) 0px 0px no-repeat #c9c9c9;}
+#screen_shot a.loading{background-image: url(/image/loading.gif); text-indent: -999px;background-position:center center;}
+
+/* 色块 */
+#color_font li{width: 110px;font-size: 19px;padding:0px 10px;}
+#color_font li span{word-wrap: break-word;word-break: break-all;width: 100%;overflow: hidden;display: block;height: 100%;}
+
+.a-quick-dial-input .error {
+	font-size: 12px;
+    color: #333;
+    padding: 0px 24px;
+    border: 1px solid #ECC478;
+    background-color: #FDE6A2;
+    position: absolute;
+    top: 0px;
+    left: 570px;
+    display: none;
+}
+
+.a-quick-dial-input .error em {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: transparent url(../image/icon/union.png?v=1.6) no-repeat -77px -65px;
+    text-indent: -999px;
+    left: 5px;
+    top: 7px;
+}
+
+.a-quick-dial-add-btn {
+	width: 120px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    background-color: #007cff;
+    border: none;
+    font-family: "微软雅黑";
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 115px;
+}
+.a-quick-dial-add-btn:hover{
+	background-color: #2190ff;
+}
+.disable-add-btn,.disable-add-btn:hover {background-color: #c9c9c9;}
+
+.a-quick-dial-header .close {
+	position: absolute;
+	right: 14px;
+	top: 9px;
+	cursor: pointer;
+	background: transparent url(../image/icon/union.png?v=1.6) no-repeat -129px -60px;
+	width: 24px;
+	height: 24px;
+	text-indent: -99px;
+	overflow: hidden;
+}
+
+.a-quick-dial-header .close:hover {
+	background-position: -154px -60px;
+}
+
+.a-quick-dial-add-list{
+	padding-left:30px;
+}
+
+.a-quick-dial-nav{
+	margin-top: 20px;
+	float: left;
+}
+
+.a-quick-dial-nav li{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	display: inline;
+	color: #666666;
+	padding: 0px 11px;
+	text-align: center;
+}
+.a-quick-dial-nav li.current{
+	background-color: #C6D6EE;
+}
+.a-quick-dial-nav li a {
+	color: #999;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+.a-quick-dial-nav li.current a{
+	color: #0062CF;
+}
+
+.a-quick-dial-search {
+	margin:20px 20px 0px 0px;
+	float: right;
+	position: relative;
+}
+
+.a-quick-dial-search input{
+	color: #999;
+	background-color: #d3d3d4;
+	border: none; 
+	padding: 0px 15px;
+	height: 30px;
+	line-height: 30px;
+	width: 150px;
+	font-size: 12px;
+	
+}
+.a-quick-dial-search-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent url(../image/icon/union.png?v=1.6) no-repeat -220px -4px;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+}
+
+.a-quick-dial-img-list {
+	float: left;
+	margin-top: 20px;
+	height: 280px;
+	overflow: auto;
+	width: 896px;
+}
+.a-quick-dial-img-list li {
+	float: left;
+	display: inline;
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+.a-quick-dial-img-list li:nth-child(5n) {
+	margin-right: 0px;
+}
+.a-quick-dial-img {border-radius: 3px;}
+.a-quick-dial-img-list .my-site-nav strong {width: 60px;}
+/** 添加快速拨号 end */
+
+/** 文件夹弹窗 begin **/
+#folder_quick_dial .bar{position: absolute;top: -70px;width: 100%;text-align: center;font-size: 40px;color: #fff;}
+#folder_quick_dial .bar .title{outline: none;display: inline-block;overflow:hidden;padding: 0px 10px;height: 50px;line-height: 50px;white-space: nowrap;text-overflow: clip;}
+#folder_quick_dial .bar .title[contenteditable=true] {border-radius: 4px;background-color: rgba(0,0,0,.3);color: #fff;border: 1px solid #fff;width:511px;-webkit-user-select: auto;-webkit-user-modify: read-write-plaintext-only;}
+#folder_quick_dial .close{display: none;}
+#folder_quick_dial .a-quick-dial-warp{padding: 40px 10px 40px 0px;}
+#folder_quick_dial .a-quick-dial-add-list{padding-left: 0px;}
+#folder_quick_dial .a-quick-dial-img-list{padding-top: 5px;height: 330px;width: 905px;padding-left: 40px;margin-top: -5px;}
+#folder_quick_dial .a-quick-dial-img-list li{margin-right: 25px;width: 153px;height: 0px;padding-bottom: 11%;}
+#folder_quick_dial .a-quick-dial-img-list li:nth-child(5n){margin-right: 0px;}
+.a-quick-dial-img-list::-webkit-scrollbar-thumb {background: rgba(0,0,0,.25);border-radius: 8px;}
+.a-quick-dial-img-list::-webkit-scrollbar {width: 12px;height: 0px;}
+/*#folder_quick_dial .my-site-grid .color-block {line-height: 100px;}*/
+/* 删除文件夹对话框 */
+.dialog {position: fixed;display: none;opacity: 0;z-index: 1;}
+.dialog-header{overflow: hidden;}
+.dialog-header a{position: absolute;top: 5px;right: 10px;width: 24px;height: 24px;background: transparent url(../image/icon/union.png?v=1.6) no-repeat -129px -60px; text-indent: -99px; overflow: hidden;}
+.dialog-header a:hover{background-position: -154px -60px;}
+.dialog-header h1{font-size: 14px;padding-left: 20px;}
+.dialog-content{padding: 36px 0 36px 130px;}
+.dialog-content h3{margin: 0px;}
+.dialog-content .ui-icon {position: absolute;left: 70px;top:62px;}
+.dialog-content p{font-size: 13px;line-height: 20px;width:280px;color:#999;margin-top: 10px;}
+.dialog-footer {background-color: #f1f1f1;text-align: right; border-top: #e4e4e4 1px solid;padding:9px 15px;}
+.dialog-footer button{height: 28px;padding:0 20px;margin-left: 16px;border: 1px solid silver;font-size: 12px;background-color: #fff;font-family: "Microsoft Yahei";}
+.dialog-footer button:hover{background-color: #e6f4fe;}
+.dialog-footer .primary, .dialog-footer button:hover {border-color: #449efb;}
+#delete_folder {width:482px;margin: -106px 0 0 -241px;background-color:#fff;height: auto;border-radius: 0px;}
+
+/** 文件夹弹窗 end **/
+.s-kin-layer {
+	position: fixed;
+	top: 0px;
+	right: -215px;
+	width: 198px;
+	height: 100%;
+	background-color: #363A3F;
+	z-index: 12;
+	padding: 20px 2px 20px 20px;
+	opacity: 0;
+}
+
+.s-kin-layer h4{
+	color: #999;
+	font-size: 14px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+
+.s-kin-layer-close {
+    position: absolute;
+    color: #666;
+    font-size: 30px;
+    font-weight: normal;
+    right: 17px;
+    top: 12px;
+}
+
+.s-kin-layer-close:hover{
+	color: #fff;
+}
+.skin-img-list { overflow: auto;}
+.skin-img-item {
+	margin-bottom: 10px; 
+}
+
+.skin-img-item a {
+	display: block;
+	height: 70px;
+	width: 175px;
+	position: relative;
+}
+
+.skin-img-item img{
+	width: 175px;
+	height: 70px;
+}
+
+.skin-img-item > a > em.img-item-choose {
+	display: block;
+}
+
+.s-skin-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 1000px;
+    z-index: -10;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    zoom: 1;
+    opacity: 0;
+    background-color:#e2ebf8;
+}
+
+/** 底部操作栏 */
+footer {
+	position: fixed;
+	width: 100px;
+	bottom: 0px;
+	right:  0px;
+	height: 60px;
+	z-index: 10;
+}
+
+footer > button {
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	background:#fff url("../image/icon/union.png?v=1.6") -156px 3px no-repeat;
+    cursor: pointer;
+    height: 34px;
+    line-height: 34px;
+    text-indent: -9999px;
+    width: 34px;
+    -webkit-border-radius: 100px;
+    padding: 0px;
+}
+/* 阻止滚动事件加模糊效果 */
+.blur{overflow-y: hidden;padding-right: 17px;}
+.blur .quickdial,.blur footer {-webkit-filter: blur(8.2px);}

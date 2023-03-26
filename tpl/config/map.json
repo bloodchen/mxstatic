@@ -1,0 +1,349 @@
+{
+    "res": {
+        "page/home.php": {
+            "uri": "/page/home.php",
+            "type": "php"
+        },
+        "static/css/common.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/css/common_14130ae.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "static/css/hot-plugin.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/css/hot-plugin_b38252b.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "static/css/infobox.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/css/infobox_f90424b.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "static/css/layout.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/css/layout_0637036.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "static/css/main.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/css/main_3172be0.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "static/css/menu.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/css/menu_ebaa0c7.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "static/css/poup.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/css/poup_a9706d8.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "static/css/reset.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/css/reset_426a592.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "static/css/siderbar.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/css/siderbar_752880b.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "static/js/ad/banner.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/ad/banner_1f5063f.js",
+            "type": "js"
+        },
+        "static/js/api.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/api_0e84970.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/datacode.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/datacode_6542a59.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/grid.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/grid_58ca2be.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "static/js/hot-plugin.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/hot-plugin_0c7c008.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "static/js/index.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/index_d8f5e4e.js",
+            "type": "js",
+            "deps": [
+                "widget/header/header.js",
+                "widget/search/search.js"
+            ],
+            "pkg": "p1"
+        },
+        "static/js/info-service.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/info-service_32eeab5.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "static/js/language.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/language_6490d8b.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/lib/dialog.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/lib/dialog_07d783e.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/lib/jquery-2.2.4.min.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/lib/jquery-2.2.4.min_98bcff9.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/lib/jquery.timeago.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/lib/jquery.timeago_8321ee9.js",
+            "type": "js",
+            "deps": [
+                "jquery"
+            ]
+        },
+        "static/js/lib/jsTree.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/lib/jsTree_41f8e39.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/lib/mod.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/lib/mod_c8bfa5d.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/lib/rgbaster.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/lib/rgbaster_57ead26.js",
+            "type": "js"
+        },
+        "static/js/lib/string.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/lib/string_ef43946.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/lib/template.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/lib/template_9762363.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/menu.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/menu_caa6571.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "static/js/newWin.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/newWin_0204777.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "static/js/settings.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/settings_1d92093.js",
+            "type": "js",
+            "pkg": "p1"
+        },
+        "static/js/worker/calc_mean_color.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/worker/calc_mean_color_7c08f59.js",
+            "type": "js"
+        },
+        "static/js/worker/my_task.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/js/worker/my_task_9850f45.js",
+            "type": "js"
+        },
+        "static/res/data/datasource.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/res/data/datasource_db27ac6.js",
+            "type": "js"
+        },
+        "static/res/i18n/data_baidu_201811.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/res/i18n/data_baidu_201811.js",
+            "type": "js"
+        },
+        "static/res/i18n/data_en-us.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/res/i18n/data_en-us.js",
+            "type": "js"
+        },
+        "static/res/i18n/data_ru-base.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/res/i18n/data_ru-base.js",
+            "type": "js"
+        },
+        "static/res/i18n/data_ru-ru.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/res/i18n/data_ru-ru.js",
+            "type": "js"
+        },
+        "static/res/i18n/data_ruixing.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/res/i18n/data_ruixing.js",
+            "type": "js"
+        },
+        "static/res/i18n/data_zh-cn.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/res/i18n/data_zh-cn.js",
+            "type": "js"
+        },
+        "static/res/intro/intro.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/res/intro/intro_a99053b.js",
+            "type": "js"
+        },
+        "static/res/intro/introjs.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/res/intro/introjs_4c67ef4.css",
+            "type": "css"
+        },
+        "sw.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/sw.js",
+            "type": "js"
+        },
+        "widget/fragment/fragment.php": {
+            "uri": "/widget/fragment/fragment.php",
+            "type": "php"
+        },
+        "widget/group/group.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/widget/group/group_6732729.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "widget/group/group.php": {
+            "uri": "/widget/group/group.php",
+            "type": "php",
+            "deps": [
+                "widget/group/group.css"
+            ]
+        },
+        "widget/header/header.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/widget/header/header_fa3a5bc.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "widget/header/header.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/widget/header/header_8703d7e.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "widget/header/header"
+            },
+            "deps": [
+                "widget/header/header.css"
+            ],
+            "pkg": "p1"
+        },
+        "widget/header/header.php": {
+            "uri": "/widget/header/header.php",
+            "type": "php",
+            "deps": [
+                "widget/header/header.js",
+                "widget/header/header.css"
+            ]
+        },
+        "widget/search/search.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/widget/search/search_0705a4c.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "widget/search/search.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/widget/search/search_be9559d.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "widget/search/search"
+            },
+            "deps": [
+                "widget/search/search.css"
+            ],
+            "pkg": "p1"
+        },
+        "widget/search/search.php": {
+            "uri": "/widget/search/search.php",
+            "type": "php",
+            "deps": [
+                "widget/search/search.js",
+                "widget/search/search.css"
+            ]
+        },
+        "widget/skin/skin.php": {
+            "uri": "/widget/skin/skin.php",
+            "type": "php"
+        },
+        "widget/topbanner/index.css": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/widget/topbanner/index_444bbc3.css",
+            "type": "css",
+            "pkg": "p2"
+        },
+        "widget/topbanner/index.js": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/widget/topbanner/index_f45fe56.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "widget/topbanner/index"
+            },
+            "deps": [
+                "widget/topbanner/index.css"
+            ],
+            "pkg": "p1"
+        },
+        "widget/topbanner/index.php": {
+            "uri": "/widget/topbanner/index.php",
+            "type": "php",
+            "deps": [
+                "widget/topbanner/index.js",
+                "widget/topbanner/index.css"
+            ]
+        }
+    },
+    "pkg": {
+        "p0": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/pkg/lib_3b377a1.js",
+            "type": "js",
+            "has": [
+                "static/js/lib/jquery-2.2.4.min.js",
+                "static/js/lib/template.js",
+                "static/js/lib/mod.js",
+                "static/js/lib/string.js",
+                "static/js/lib/dialog.js",
+                "static/js/lib/jsTree.js",
+                "static/js/menu.js",
+                "static/js/api.js",
+                "static/js/datacode.js",
+                "static/js/language.js"
+            ]
+        },
+        "p1": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/pkg/main_1c2949f.js",
+            "type": "js",
+            "has": [
+                "widget/header/header.js",
+                "widget/search/search.js",
+                "widget/topbanner/index.js",
+                "static/js/newWin.js",
+                "static/js/settings.js",
+                "static/js/grid.js",
+                "static/js/index.js",
+                "static/js/hot-plugin.js",
+                "static/js/info-service.js"
+            ],
+            "deps": [
+                "widget/header/header.css",
+                "widget/search/search.css",
+                "widget/topbanner/index.css"
+            ]
+        },
+        "p2": {
+            "uri": "https://pc-newtab-img.maxthon.com/static/pkg/aio_98ff497.css",
+            "type": "css",
+            "has": [
+                "static/css/common.css",
+                "static/css/hot-plugin.css",
+                "static/css/infobox.css",
+                "static/css/layout.css",
+                "static/css/main.css",
+                "static/css/menu.css",
+                "static/css/poup.css",
+                "static/css/reset.css",
+                "static/css/siderbar.css",
+                "widget/group/group.css",
+                "widget/header/header.css",
+                "widget/search/search.css",
+                "widget/topbanner/index.css"
+            ]
+        }
+    }
+}

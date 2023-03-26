@@ -1,0 +1,125 @@
+.banner {
+    background: #de2833;
+}
+
+.banner-content {
+    position: relative;
+    margin: 0 auto;
+    width: 75%;
+    max-width: 1100px;
+    min-width: 900px;
+    height: 0px;
+    background: url(/static/img/boot_logo/lvt-logo-cn-v2.png) 0 0 no-repeat;
+    transition: height .3s;
+    overflow: hidden;
+    background-size: 100% 100%;
+}
+
+.banner-btn-wrapper {
+    position: absolute;
+    left: 48%;
+    bottom: 10px;
+}
+
+.banner-btn-wrapper a {
+    display: inline-block;
+    padding: 0 30px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    background: #fff9de;
+    font-size: 24px;
+    color: #de2833;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 110px;
+}
+
+.banner-btn-wrapper a:hover {
+    background: #fceca2;
+}
+
+.en .banner-btn-wrapper a {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 20px;
+} 
+
+.banner-collapse {
+    position: absolute;
+    right: 20px;
+    width: 35px;
+    height: 30px;
+    background: url(/static/img/boot_logo/lvt-collapse.png?v=24012018) no-repeat;
+}
+
+.banner-collapse:hover {
+    background-image: url(/static/img/boot_logo/lvt-collapse-hover.png?v=24012018);
+}
+/* 
+.en .banner-collapse {
+    background: url(/static/img/boot_logo/banner-collapse-en-new.png?v=24012018) no-repeat;
+}
+
+.en .banner-collapse:hover {
+    background-image: url(/static/img/boot_logo/banner-collapse-en-hover-new.png?v=24012018);
+} */
+
+.banner-build-wrapper {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    width: 0;
+    height: 42px;
+    border-left: 1px solid #ffda97;
+    visibility: visible;
+}
+.banner-build {
+    position: absolute;
+    left: -12px;
+    bottom: -25px;
+    height: 25px;
+    width: 24px;
+    background: url(/static/img/boot_logo/lvt-build.png?v=24012018) bottom no-repeat;
+}
+
+.en .banner-content {
+    background-image: url(/static/img/boot_logo/lvt-logo-en-v2.png);
+    background-position: 20px;
+}
+
+.visible {
+    visibility: visible;
+    position: relative;
+}
+.visible .banner-build-wrapper {
+    visibility: hidden;
+}
+
+.visible .banner-content {
+    height: 180px;
+}
+
+.en.visible .banner-content {
+    height: 140px;
+}
+
+.ad-text {
+    position: absolute;
+    right: 15px;
+    bottom: 11px;
+    height: 18px;
+    padding: 0 6px;
+    border-radius: 3px;
+    line-height: 18px;
+    font-family: '微软雅黑';
+    font-size: 12px;
+    color: #eecab5;
+    background: rgba(0, 0, 0, .12);
+}
+
+@media screen and (min-width:900px) and (max-width: 1270px) {
+    .en .banner-btn-wrapper {
+        right: 1%;
+    }
+} 

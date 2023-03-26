@@ -1,2 +1,1 @@
-# mxstatic
-files for mx
+## Maxthon6 Quick Access

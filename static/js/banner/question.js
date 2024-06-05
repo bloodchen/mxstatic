@@ -9,7 +9,7 @@ define('static/js/banner/question.js', function (require, exports, module) {
     if(navigator.language.toLocaleLowerCase() !== 'zh-cn' || localStorage.getItem('question-naire-collapse') === 'done') return;
     var questionTpl = '<div id="question">\
        <button class="close-btn close-ad"></button>\
-       <img src="https://pc-newtab-img.maxthon.com/static/img/question.png" alt="" width="118" height="98" />\
+       <img src="https://pc-newtab.maxthonimg.com/static/img/question.png" alt="" width="118" height="98" />\
     </div';
 
     var style = document.createElement('style');

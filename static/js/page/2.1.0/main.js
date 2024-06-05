@@ -78,7 +78,7 @@ $.fn.dialog = function (options) {
     }
 
     var show = function () {
-
+        
         $mx_mask_layer.off('click').on('click', function (e) {
             if (op.close()) {
                 closeFun();
@@ -362,7 +362,7 @@ treeMenu.prototype = {
         }
     },
     getDom: function (a) {
-        // if (!a) { return '\n<ul >\n</ul>\n'; }  //当前节点不存在的时候，退出
+        // if (!a) { return '\n<ul >\n</ul>\n'; }  //当前节点不存在的时候，退出  
         var html = '\n<ul id="note_tree">\n';
         if(a) {
             for (var i = 0; i < a.length; i++) {
@@ -377,7 +377,7 @@ treeMenu.prototype = {
         }
         html += '</ul>\n';
         return html;
-    }
+    } 
 }
 
 /* Menu Methods */
@@ -439,7 +439,7 @@ var Menu = {
     },
 
     createPopupMenu: function () {
-
+    
         var node = document.createElement("div");
         node.setAttribute('id', 'pop_menu');
         node.setAttribute('class', 'pop-menu');
@@ -468,7 +468,7 @@ var Menu = {
         } else {
             left = clientX;
         }
-
+        
         menuContent.style.cssText = 'left:' + (left + scrollLeft) + 'px; top:' + (top + scrollTop) + 'px;width:' + (offsetWidth + 10) + 'px; z-index:999;';
 
         var items = $(menuContent).find('.menu-item');
@@ -516,7 +516,7 @@ $(function () {
     var SYNC_KEY_QA = 'qa_layout';
     var SYNC_KEY_QA_WIDGET = 'qa_widget';
     var MAP_LIST = {};
-
+    
     window.Api = window.Api || {};
     window.Api.Maxthon = (function () {
 
@@ -542,8 +542,8 @@ $(function () {
 
         /**
          * 获取页面信息
-         * @param
-         * @return
+         * @param  
+         * @return 
          */
         function getLayout(layout, widget, callback) {
             var _this = this;
@@ -726,7 +726,7 @@ $(function () {
 
         /**
          * 判断本地是否存在截图
-         * @param url
+         * @param url 
          * @param cb
          */
         function isThumbExists(url, cb) {
@@ -883,7 +883,7 @@ $(function () {
     })();
 
     window.Api.Grid = (function () {
-
+        
         function saveOrUpdate(cb) {
             maxthon.getSyncValue(MY_SITE, function (data_list) {
                 if ($.isEmptyObject(data_list)) {
@@ -2459,7 +2459,7 @@ $(function () {
     /**
      * 侧边栏发生变化时触发
      * @param  {[type]} data)  int type, 	// sidebar(0)
-                               int action, 	//get(0) set(1)
+                               int action, 	//get(0) set(1)    
      * @return {[type]}        int result, //show(0), hide(1)
      */
     Api.useApi('common.registerUIStatusChanged', {}, function (data) {
@@ -2486,7 +2486,7 @@ $(function () {
         }
     });
 
-    ///计算两个整数的百分比值
+    ///计算两个整数的百分比值 
     function toPercent(num, total) {
         num = parseFloat(num);
         total = parseFloat(total);
@@ -2505,7 +2505,7 @@ $(function () {
             logout();
             return;
         };
-
+        
         if(data.nickname == '' + data.id) {
             data.nickname = data.email;
         }
@@ -2533,7 +2533,7 @@ $(function () {
                                 <span class="line">|</span>\
                                 <span class="login">' + Language.getLang('Login') + '</span>\
                                 <div class="profile-dropdown">\
-                                    <img src="//pc-newtab-img.maxthon.com/static/img/guest.png" alt="photo"/>\
+                                    <img src="//pc-newtab.maxthonimg.com/static/img/guest.png" alt="photo"/>\
                                 </div>\
                             </li>\
                         </ul>');
@@ -2559,7 +2559,7 @@ $(function () {
 						<span class="line">|</span>\
 						<span class="login-user">' + data.nickname + '</span>\
 						<div class="profile-dropdown">\
-							<img src="'+ data.avatarUrl.replace(/^(https?:\/\/.+\.maxthon)/, 'https://avatar.maxthon') + '" alt="头像" onerror="//pc-newtab-img.maxthon.com/static/img/icon/default.png"/>\
+							<img src="'+ data.avatarUrl.replace(/^(https?:\/\/.+\.maxthon)/, 'https://avatar.maxthon') + '" alt="头像" onerror="//pc-newtab.maxthonimg.com/static/img/icon/default.png"/>\
 							<div class="profile-continer">\
 								<div class="profile-detail">\
 									<h4>\
@@ -2609,7 +2609,7 @@ $(function () {
     }
 
     $search.on('submit', '.search-form', function (e) {
-
+    
         var action = $(this).attr('action');
         if (action === 'http://s.maxthon.com/') {
             var key = $searchInput.val();
@@ -2619,7 +2619,7 @@ $(function () {
             maxthon.webSend("quickaccess.multiSearch", { key: key }, function (data) { })
             return false;
         }
-
+        
         showZoomBox();
         // 输入关键字回车/点击搜索按钮检索结果 挖矿浏览器心跳上报
         Api.useApi('common.reportLVTAction', { 'action': 'p-mx5Newtab_searchResult'});
@@ -2671,7 +2671,7 @@ $(function () {
             $searchForm.append($extraParam);
             $extraParam.html(tmpl);
         }
-
+        
         $searchEngine.css({'background-image' : 'url(mx://favicon/' + data.url + ')'});
         $changeEngine.text(data.name);
         $searchForm.attr('action', action);
@@ -2715,7 +2715,7 @@ $(function () {
      */
     function buildEngineList(ele, list) {
         var res = '<div class="engine-list-inner">';
-
+        
         list.forEach(function(item, i) {
             res += '<p data-engine=' + i + '><img src="mx://favicon/' + item.url + '" /><span>' + item.name + '</span></p>';
         });
@@ -2742,10 +2742,10 @@ $(function () {
              * 选择搜索引擎
              */
             $search.on('click', '.engine-list p', function (e) {
-
+                
                 var defaultSearch = searchEngineList[$(this).index()];
                 setEngine(defaultSearch);
-
+                
                 Api.useApi('config.set', {key: 'browser.general.default_search_engine2', value: JSON.stringify(defaultSearch) }, function() {
                 });
                 hideEngineList();
@@ -2753,7 +2753,7 @@ $(function () {
             });
         });
     }
-
+   
     initEngineList();
     $(document).off('click', hideEngineList).on('click', hideEngineList);
 });
@@ -3094,13 +3094,13 @@ $(function () {
          * 百度商务站点打开统计
          */
         function baiduStatic(obj) {
-            if (obj.url === 'https://www.baidu.com/index.php?tn=maxthon2&ch=2') {
+            if (obj.url === 'https://go.mxfast.com/bd1/') {
                 window.Api.statistic.webSend({
                     'm': 'mx5Commerciallink',
                     'n': 'baidu',
                     'data': {
                         'title': 'MX5新标签页百度站点',
-                        'url': 'https://www.baidu.com/index.php?tn=maxthon2&ch=2'
+                        'url': 'https://go.mxfast.com/bd1/'
                     }
                 });
             }
@@ -3121,9 +3121,9 @@ $(function () {
 
             // 点击任一 一个top8商务链进行心跳上报
             if(obj.isHot === true) {
-                maxthon.useApi('common.reportLVTAction', { 'action': 'p-mx5Newtab_addTop8'});
+                maxthon.useApi('common.reportLVTAction', { 'action': 'p-mx5Newtab_addTop8'}); 
             }
-
+            
 
             if (obj.url && obj.url.startWith('mx://note/?id')) {
                 maxthon.useApi('note.openNoteInPopWindow', {
@@ -3145,7 +3145,7 @@ $(function () {
             } else {
                 window.location.href = obj.url;
             }
-
+            
             // 关闭文件夹弹框
             current_group && hideGroup();
             // return false;
@@ -4497,9 +4497,9 @@ $(function () {
  *      'brightness' : ['light','dark']   dark 明亮度
  *      'pic' : ['','','','']
  *      'type' : '' built-in : 内置, custome 用户自定义
- *      'mode'  : '' ,
+ *      'mode'  : '' , 
  * }
- *
+ * 
  */
 $(function () {
     var configPanel = (function () {
@@ -4701,7 +4701,7 @@ $(function () {
                 saveOption(option);
             });
 
-            var playFlag = false;
+            var playFlag = false; 
             function onVisibilityChanged(event) {
                 var hidden = event.target.webkitHidden;
                 if (hidden) {
@@ -4852,7 +4852,7 @@ $(function () {
 
             // fixed: mac浏览器屏蔽上次未关闭标签
             if(maxthon.platform === 'Mac') {
-                $grid_tab_node.eq(3).remove();
+                $grid_tab_node.eq(3).remove(); 
             }
             // 补丁: 兼容1.6版本客户端不支持的接口
             if( (maxthon.platform === 'Win' && maxthon.max_version.cmpVersions('5.0.3.200') < 0) ||
@@ -5026,9 +5026,9 @@ $(function () {
                     'url': $ele.attr('href'),                                       // url链接
                     'image': $ele.attr('d-image'),                                  // 图片路径
                     'sq_img' : $ele.attr('d-sq-img'),
-                    'sq_md5sum' : $ele.attr('d-sq-md5'),
-                    're_img' : $ele.attr('d-re-img'),
-                    're_md5sum' : $ele.attr('d-re-md5'),
+                    'sq_md5sum' : $ele.attr('d-sq-md5'), 
+                    're_img' : $ele.attr('d-re-img'), 
+                    're_md5sum' : $ele.attr('d-re-md5'), 
                     'isHot': false
                 };
 
@@ -5083,7 +5083,7 @@ $(function () {
                         n: editOperate ? 'edit' : 'add',
                         p: 'success',
                         data: {
-                            'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex,
+                            'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex, 
                             'addSource': 'default'
                         }
                     };
@@ -5147,9 +5147,9 @@ $(function () {
                 }
                 var ueip_data = {
                     o: grid.isHot === true ? 'top' : 'fav',
-                    data: {
-                        'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex,
-                        'addSource': grid_source || 'custome'
+                    data: { 
+                        'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex, 
+                        'addSource': grid_source || 'custome' 
                     },
                     m: 'managesites'
                 };
@@ -5210,7 +5210,7 @@ $(function () {
                     case 1:
                         ueip_data.n = 'screenshot';
                         break;
-                    default:
+                    default: 
                         ueip_data.n = 'colorBlock';
                         break;
                 }
@@ -5421,7 +5421,7 @@ $(function () {
         }
         /**
          * 根据url更新radio列表
-         * @param options
+         * @param options 
          * @param editable 是否能切换
          */
         function updateRadio(options, editable) {
@@ -5621,7 +5621,7 @@ $(function () {
                 return cdnServer + '/image/logo/Re/offline.png';
             }
         }
-
+        
         return {
             init: init,
             getThumbsUrl: getThumbsUrl,
@@ -5780,7 +5780,7 @@ $(function () {
 
     /**
      *  加载活动
-     * @param {活动信息} activity
+     * @param {活动信息} activity 
      */
     function loadActivity(activity) {
         getStore('activity_tpl',

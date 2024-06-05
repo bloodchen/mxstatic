@@ -51,11 +51,10 @@ Banner.prototype = (function () {
         var _this = this;
         $.ajax({
             type: 'post',
-            // async: true,
-            dataType: 'json',
-            // jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
-            // jsonpCallback:"success",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+            async: true,
+            dataType: "json",
             url: 'http://www.maxthon.cn/hd/survey/tomx4-1/tab_api.php',
+            // jsonpCallback:"jsonpCallback",
             data: {
                 'deviceid': _this.deviceid,
                 'pn': _this.pn,

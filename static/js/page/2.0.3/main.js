@@ -78,7 +78,7 @@ $.fn.dialog = function (options) {
     }
 
     var show = function () {
-
+        
         $mx_mask_layer.off('click').on('click', function (e) {
             if (op.close()) {
                 closeFun();
@@ -362,7 +362,7 @@ treeMenu.prototype = {
         }
     },
     getDom: function (a) {
-        // if (!a) { return '\n<ul >\n</ul>\n'; }  //当前节点不存在的时候，退出
+        // if (!a) { return '\n<ul >\n</ul>\n'; }  //当前节点不存在的时候，退出  
         var html = '\n<ul id="note_tree">\n';
         if(a) {
             for (var i = 0; i < a.length; i++) {
@@ -377,7 +377,7 @@ treeMenu.prototype = {
         }
         html += '</ul>\n';
         return html;
-    }
+    } 
 }
 
 /* Menu Methods */
@@ -439,7 +439,7 @@ var Menu = {
     },
 
     createPopupMenu: function () {
-
+    
         var node = document.createElement("div");
         node.setAttribute('id', 'mx_popup_menu');
         node.setAttribute('class', 'mx-popup-menu');
@@ -468,7 +468,7 @@ var Menu = {
         } else {
             left = clientX;
         }
-
+        
         menuContent.style.cssText = 'left:' + (left + scrollLeft) + 'px; top:' + (top + scrollTop) + 'px;width:' + (offsetWidth + 10) + 'px; z-index:999;';
 
         var items = $(menuContent).find('.mx-menu-item');
@@ -516,7 +516,7 @@ $(function () {
     var SYNC_KEY_QA = 'qa_layout';
     var SYNC_KEY_QA_WIDGET = 'qa_widget';
     var MAP_LIST = {};
-
+    
     window.Api = window.Api || {};
     window.Api.Maxthon = (function () {
 
@@ -542,8 +542,8 @@ $(function () {
 
         /**
          * 获取页面信息
-         * @param
-         * @return
+         * @param  
+         * @return 
          */
         function getLayout(layout, widget, callback) {
             var _this = this;
@@ -726,7 +726,7 @@ $(function () {
 
         /**
          * 判断本地是否存在截图
-         * @param url
+         * @param url 
          * @param cb
          */
         function isThumbExists(url, cb) {
@@ -883,7 +883,7 @@ $(function () {
     })();
 
     window.Api.Grid = (function () {
-
+        
         function saveOrUpdate(cb) {
             maxthon.getSyncValue(MY_SITE, function (data_list) {
                 if ($.isEmptyObject(data_list)) {
@@ -2943,7 +2943,7 @@ $(function () {
                 beginY = xy.top;// 解决滚屏问题
                 mouse_beginX = event.clientX;
                 mouse_beginY = event.clientY;
-
+                
                 document.addEventListener('mousemove', doDrag, false);
                 document.addEventListener('mouseup', stopDrag, false);
             }
@@ -2953,7 +2953,7 @@ $(function () {
                 if ((Math.abs(event.clientX - mouse_beginX) === 0) || (Math.abs(event.clientY - mouse_beginY) === 0)) {
                     return;
                 }
-
+                
                 var sxy = getScroll();
                 var left = beginX + sxy.left + event.clientX - mouse_beginX;
                 var top = beginY + sxy.top + event.clientY - mouse_beginY;
@@ -3084,7 +3084,7 @@ $(function () {
                             }
                             return false;
                         }
-                        if (maxthon.max_version.cmpVersions('5.0.1.1600') > 0) {
+                        if (maxthon.max_version.cmpVersions('5.0.1.1600') > 0) { 
                             gridClick(_this);
                             return false;
                         }
@@ -3266,7 +3266,7 @@ $(function () {
             grid_ui_data.container_width = $grid_body.width();
             grid_ui_data.height = grid_ui_data.container_width * 0.15 * 0.7 + grid_ui_data.container_width * 0.01;
         }
-
+        
         function windowResizeWidth() {
             grid_ui_data.top_container_width = $top_container.width();
             grid_ui_data.container_width = $grid_body.width();
@@ -3848,14 +3848,14 @@ $(function () {
     //                     api.Grid.getGridDataList();
     //                     return;
     //                 }
-
+    
     //                 if (!isSync) {
     //                     isSync = true;
     //                     api.Grid.getGridDataList();
     //                 }
     //                 break;
     //             case 'addNewSite':
-
+                    
     //                 break;
     //         }
     //     });
@@ -3873,9 +3873,9 @@ $(function () {
  *      'brightness' : ['light','dark']   dark 明亮度
  *      'pic' : ['','','','']
  *      'type' : '' built-in : 内置, custome 用户自定义
- *      'mode'  : '' ,
+ *      'mode'  : '' , 
  * }
- *
+ * 
  */
 $(function () {
     var configPanel = (function () {
@@ -4196,7 +4196,7 @@ $(function () {
 
             // fixed: mac浏览器屏蔽上次未关闭标签
             if(maxthon.platform === 'Mac') {
-                $grid_tab_node.eq(3).remove();
+                $grid_tab_node.eq(3).remove(); 
             }
             // 补丁: 兼容1.6版本客户端不支持的接口
             if( (maxthon.platform === 'Win' && maxthon.max_version.cmpVersions('5.0.3.200') < 0) ||
@@ -4368,9 +4368,9 @@ $(function () {
                     'url': $ele.attr('href'),                                       // url链接
                     'image': $ele.attr('d-image'),                                  // 图片路径
                     'sq_img' : $ele.attr('d-sq-img'),
-                    'sq_md5sum' : $ele.attr('d-sq-md5'),
-                    're_img' : $ele.attr('d-re-img'),
-                    're_md5sum' : $ele.attr('d-re-md5'),
+                    'sq_md5sum' : $ele.attr('d-sq-md5'), 
+                    're_img' : $ele.attr('d-re-img'), 
+                    're_md5sum' : $ele.attr('d-re-md5'), 
                     'isHot': false
                 };
 
@@ -4425,7 +4425,7 @@ $(function () {
                         n: editOperate ? 'edit' : 'add',
                         p: 'success',
                         data: {
-                            'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex,
+                            'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex, 
                             'addSource': 'default'
                         }
                     };
@@ -4489,9 +4489,9 @@ $(function () {
                 }
                 var ueip_data = {
                     o: grid.isHot === true ? 'top' : 'fav',
-                    data: {
-                        'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex,
-                        'addSource': grid_source || 'custome'
+                    data: { 
+                        'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex, 
+                        'addSource': grid_source || 'custome' 
                     },
                     m: 'managesites'
                 };
@@ -4550,7 +4550,7 @@ $(function () {
                     case 1:
                         ueip_data.n = 'screenshot';
                         break;
-                    default:
+                    default: 
                         ueip_data.n = 'colorBlock';
                         break;
                 }
@@ -4762,7 +4762,7 @@ $(function () {
         }
         /**
          * 根据url更新radio列表
-         * @param options
+         * @param options 
          * @param editable 是否能切换
          */
         function updateRadio(options, editable) {
@@ -4976,7 +4976,7 @@ $(function () {
                 return cdnServer + '/image/logo/Re/offline.png';
             }
         }
-
+        
         return {
             init: init,
             getThumbsUrl: getThumbsUrl,
@@ -5211,7 +5211,7 @@ $(function () {
 
     var lang = navigator.language.toLocaleLowerCase();
     Promise.all([getPageTpl(lang), getPageData(lang)])
-    .then(function(data) {
+    .then(function(data) { 
         pageinit(data[0]);
         $('#page_data').append(data[1]);
     }).catch(function(err) {
@@ -5284,17 +5284,17 @@ $(function () {
 
     /**
      *  加载活动
-     * @param {活动信息} activity
+     * @param {活动信息} activity 
      */
     function loadActivity(activity) {
-        getStore('activity_tpl',
-                'local_act_template',
+        getStore('activity_tpl', 
+                'local_act_template', 
                 lang,
                 '/static/res/tpl/activity.tpl').then(function(tpl) {
             var actHtml = /*localStorage.getItem('__ACTHTML__') ? localStorage.getItem('__ACTHTML__') :*/ template(tpl, { activity: activity });
             document.getElementById('activity').innerHTML = actHtml;
             // localStorage.setItem('__ACTHTML__', actHtml);
-
+            
             var hoverTimer;
             $('.nav-header-menu li').on('mouseover mouseout', function(e) {
                 e.stopPropagation();
@@ -5409,8 +5409,8 @@ $(function () {
         firstLoad()
     })
 
-    if(lang !== 'zh-cn') { //
-        $('.siderbar img').attr('src', '//pc-newtab-img.maxthon.com/static/img/qcode-foreign.png')
+    if(lang !== 'zh-cn') { // 
+        $('.siderbar img').attr('src', '//pc-newtab.maxthonimg.com/static/img/qcode-foreign.png')
         $('.siderbar .title').text('Try MX5 App')
     }
 

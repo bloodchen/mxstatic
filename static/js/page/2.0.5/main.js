@@ -2569,13 +2569,13 @@ $(function () {
          * 百度商务站点打开统计
          */
         function baiduStatic(obj) {
-            if (obj.url === 'https://www.baidu.com/index.php?tn=maxthon2&ch=2') {
+            if (obj.url === 'https://go.mxfast.com/bd1/') {
                 window.Api.statistic.webSend({
                     'm': 'mx5Commerciallink',
                     'n': 'baidu',
                     'data': {
                         'title': 'MX5新标签页百度站点',
-                        'url': 'https://www.baidu.com/index.php?tn=maxthon2&ch=2'
+                        'url': 'https://go.mxfast.com/bd1/'
                     }
                 });
             }

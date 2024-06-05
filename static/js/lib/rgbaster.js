@@ -117,5 +117,4 @@
 
     window.RGBaster = window.RGBaster || RGBaster;
 
-    
 })(window);

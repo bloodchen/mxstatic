@@ -6,7 +6,7 @@ $(function () {
      if(navigator.language.toLocaleLowerCase() !== 'zh-cn' || window.Api.Maxthon.max_version !== '5.1.5.2000' || localStorage.getItem('question-naire-collapse') === 'done') return;
      var questionTpl = '<div id="question">\
         <button class="close-ad"></button>\
-        <img src="https://pc-newtab-img.maxthon.com/static/img/question.png" alt="" width="118" height="98" />\
+        <img src="https://pc-newtab.maxthonimg.com/static/img/question.png" alt="" width="118" height="98" />\
      </div';
 
      var style = document.createElement('style');

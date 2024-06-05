@@ -42,7 +42,7 @@
 }
 
 i.sprite.sprite-circle {
-    background: url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830) 1px -112px no-repeat;
+    background: url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830) 1px -112px no-repeat;
     position: absolute;
     width: 50px;
     height: 50px;
@@ -112,7 +112,7 @@ i.sprite.sprite-circle {
     height: 34px;
     border-radius: 100px;
     cursor: pointer;
-    background:#fff url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830) no-repeat -156px 3px;
+    background:#fff url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830) no-repeat -156px 3px;
 }
 #qr-Code {
     background-position: -234px 3px;
@@ -330,7 +330,7 @@ i.sprite.sprite-circle {
     width: 20px;
     height: 25px;
     position: absolute;
-    background:transparent url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20171128) no-repeat -146px -126px;
+    background:transparent url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20171128) no-repeat -146px -126px;
     cursor: pointer;
     display: none;
 }
@@ -471,7 +471,7 @@ i.sprite.sprite-circle {
 
 /* 顶部皮肤样式 */
 .skin {position: fixed; top: 0; right: 0; display: none;z-index: 1; width: 100%;height: 100%;}
-.skin-wrap {width: 100%;height: 100%;background-position: center bottom;background-size: cover; background-image: url(https://pc-newtab-img.maxthon.com/static/img/skin/20171211.png?v=20171211);cursor: pointer;}
+.skin-wrap {width: 100%;height: 100%;background-position: center bottom;background-size: cover; background-image: url(https://pc-newtab.maxthonimg.com/static/img/skin/20171211.png?v=20171211);cursor: pointer;}
 .skin .close {position: absolute;cursor: pointer;width: 40px;height: 40px;top: 10px;right: 10px;cursor: pointer;background: rgba(0, 0, 0, 0.3)}
 .skin .close::before, .skin .close::after {content: '';position: absolute;height: 2px;width: 70%;top: 50%;left: 6px;background: rgba(255,255,255,0.9);border-radius: 5px;}
 .skin .close::before{transform: rotate(45deg)}
@@ -636,7 +636,7 @@ i.sprite.sprite-circle {
 }
 
 .main.swap::before {
-    background: rgba(0, 0, 0, 0.4) url(//pc-newtab-img.maxthon.com/static/img/swap_icon.gif) no-repeat 6px 6px;
+    background: rgba(0, 0, 0, 0.4) url(//pc-newtab.maxthonimg.com/static/img/swap_icon.gif) no-repeat 6px 6px;
     transition: all 0.3s;
     position: absolute;
 }
@@ -645,7 +645,7 @@ i.sprite.sprite-circle {
 /** 截图loading */
 
 .grid.loading::before {
-    background: #fff url(//pc-newtab-img.maxthon.com/static/img/loading.gif) no-repeat center center;
+    background: #fff url(//pc-newtab.maxthonimg.com/static/img/loading.gif) no-repeat center center;
     position: absolute;
 }
 
@@ -663,7 +663,7 @@ i.sprite.sprite-circle {
 }
 
 .thumbnail-container .loading {
-    background: #fff url(//pc-newtab-img.maxthon.com/static/img/loading.gif) no-repeat center center;
+    background: #fff url(//pc-newtab.maxthonimg.com/static/img/loading.gif) no-repeat center center;
     background-size: 30% 45%;
 }
 
@@ -750,32 +750,32 @@ i.sprite.sprite-circle {
 
 .grid .function button.delete {
     right: 5px;
-    background: url(//pc-newtab-img.maxthon.com/static/img/icon/delete.png) no-repeat #000;
+    background: url(//pc-newtab.maxthonimg.com/static/img/icon/delete.png) no-repeat #000;
     background-size: 20px;
 }
 
 .grid .function button.delete:hover {
-    background-image: url(//pc-newtab-img.maxthon.com/static/img/icon/delete_hover.png);
+    background-image: url(//pc-newtab.maxthonimg.com/static/img/icon/delete_hover.png);
 }
 
 .grid .function button.edit {
     right: 27px;
-    background: url(//pc-newtab-img.maxthon.com/static/img/icon/edit.png) no-repeat #000;
+    background: url(//pc-newtab.maxthonimg.com/static/img/icon/edit.png) no-repeat #000;
     background-size: 20px;
 }
 
 .grid .function button.edit:hover {
-    background-image: url(//pc-newtab-img.maxthon.com/static/img/icon/edit_hover.png);
+    background-image: url(//pc-newtab.maxthonimg.com/static/img/icon/edit_hover.png);
 }
 
 .grid .function button.refresh {
     right: 51px;
-    background: url(//pc-newtab-img.maxthon.com/static/img/icon/refresh.png) no-repeat #000;
+    background: url(//pc-newtab.maxthonimg.com/static/img/icon/refresh.png) no-repeat #000;
     background-size: 20px;
 }
 
 .grid .function button.refresh:hover {
-    background-image: url(//pc-newtab-img.maxthon.com/static/img/icon/refresh_hover.png);
+    background-image: url(//pc-newtab.maxthonimg.com/static/img/icon/refresh_hover.png);
 }
 
 .group .function button {
@@ -1001,7 +1001,7 @@ i.sprite.sprite-circle {
     font-family: '微软雅黑';
     font-size: 12px;
     color: #fff;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, .2);    
 }
 
 .small-hanger {
@@ -1193,7 +1193,7 @@ i.sprite.sprite-circle {
     right: 14px;
     top: 9px;
     cursor: pointer;
-    background: transparent url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830) no-repeat -129px -60px;
+    background: transparent url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830) no-repeat -129px -60px;
     width: 24px;
     height: 24px;
     text-indent: -99px;
@@ -1333,7 +1333,7 @@ i.sprite.sprite-circle {
 }
 
 .dialog-input .main-warp li > a.menu-head i {
-    background: url(//pc-newtab-img.maxthon.com/static/img/icon/tree-folder.svg?v=20170830) 0px 2px no-repeat;
+    background: url(//pc-newtab.maxthonimg.com/static/img/icon/tree-folder.svg?v=20170830) 0px 2px no-repeat;
     position: absolute;
     top: 4px;
     left: 0px;
@@ -1347,11 +1347,11 @@ i.sprite.sprite-circle {
     left: -16px;
     width: 16px;
     height: 16px;
-    background: url('//pc-newtab-img.maxthon.com/static/img/icon/icon_arrow_right.png') center center no-repeat;
+    background: url('//pc-newtab.maxthonimg.com/static/img/icon/icon_arrow_right.png') center center no-repeat;
 }
 
 .dialog-input .main-warp li.open > a.menu-head .folder-head-toggle {
-    background-image: url(//pc-newtab-img.maxthon.com/static/img/icon/icon_arrow_down.png);
+    background-image: url(//pc-newtab.maxthonimg.com/static/img/icon/icon_arrow_down.png);
     left: -12px;
 }
 
@@ -1364,18 +1364,18 @@ i.sprite.sprite-circle {
 .dialog-input .radio-list {
     cursor: pointer;
     float: left;
-    background: url(//pc-newtab-img.maxthon.com/static/img/icon/radio.png) no-repeat 0 20px;
+    background: url(//pc-newtab.maxthonimg.com/static/img/icon/radio.png) no-repeat 0 20px;
     background-size: 20px;
     padding-left: 21px;
     padding-bottom: 24px;
 }
 
 .dialog-input .radio-list.selected {
-    background-image: url(//pc-newtab-img.maxthon.com/static/img/icon/radio_selected.png);
+    background-image: url(//pc-newtab.maxthonimg.com/static/img/icon/radio_selected.png);
 }
 
 .dialog-input .radio-list.disabled {
-    background-image: url(//pc-newtab-img.maxthon.com/static/img/icon/radio_disable.png);
+    background-image: url(//pc-newtab.maxthonimg.com/static/img/icon/radio_disable.png);
 }
 
 .dialog-input label {
@@ -1432,7 +1432,7 @@ i.sprite.sprite-circle {
     width: 20px;
     height: 20px;
     position: absolute;
-    background: transparent url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830) no-repeat -58px -190px;
+    background: transparent url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830) no-repeat -58px -190px;
 }
 
 .disable li.selected::after {
@@ -1454,7 +1454,7 @@ i.sprite.sprite-circle {
     width: 18px;
     height: 18px;
     position: absolute;
-    background: transparent url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830) no-repeat -228px -64px;
+    background: transparent url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830) no-repeat -228px -64px;
     text-indent: -999px;
     left: 5px;
     top: 7px;
@@ -1525,7 +1525,7 @@ i.sprite.sprite-circle {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: transparent url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830) no-repeat -220px -5px;
+    background: transparent url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830) no-repeat -220px -5px;
     top: 6px;
     left: 10px;
     cursor: pointer;
@@ -1727,7 +1727,7 @@ a {
     height: 28px;
 	line-height: 28px;
 	white-space: nowrap;
-	background: url('//pc-newtab-img.maxthon.com/static/img/grey.gif') no-repeat 10px 10px;
+	background: url('//pc-newtab.maxthonimg.com/static/img/grey.gif') no-repeat 10px 10px;
 	background-size: 16px;
 }
 
@@ -1806,7 +1806,7 @@ a {
 	padding: 8px 0 8px 7px;
 	border:0;
 	margin-right: 25px;
-	font:12px/20px "Segoe UI",Arial,SimSun;
+	font:12px/20px "Segoe UI",Arial,SimSun;	
 	background-color: #f9f9f9;
 	color: #000;
 	outline: none;
@@ -1855,7 +1855,7 @@ a {
 	height: 34px;
 	border-radius: 100px;
 	cursor: pointer;
-	background:#fff url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830) no-repeat;
+	background:#fff url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830) no-repeat;
 }
 .siderbar li:hover span{
 	background-color: #f8f8f8;
@@ -1932,7 +1932,7 @@ a {
 	z-index: 1;
 }
 #config-layer .tips {
-	background:transparent url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830) -208px -64px no-repeat;
+	background:transparent url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830) -208px -64px no-repeat;
 	width: 20px;
 	height: 20px;
 	top: 37px;
@@ -1993,11 +1993,11 @@ a {
 	margin-left: -25px;
 	top: 50%;
 	margin-top: -25px;
-	background-image: url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830);
+	background-image: url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830);
 }
 .operate-button.pause {background-position: -95px -85px;}
 .operate-button.start {background-position: -48px -85px;}
-.operate-button.loading {background-image: url(//pc-newtab-img.maxthon.com/static/img/icon/loading.png);animation:turn 2s linear infinite;;}
+.operate-button.loading {background-image: url(//pc-newtab.maxthonimg.com/static/img/icon/loading.png);animation:turn 2s linear infinite;;}
 @keyframes turn{
 	0%{
 		transform: rotateZ(0deg);
@@ -2006,8 +2006,8 @@ a {
 		transform: rotateZ(360deg);
 	}
 }
-.skin-img-item.selected .operate-button {
-	display: block;
+.skin-img-item.selected .operate-button { 
+	display: block; 
 }
 .skin-img-item.selected > a::after {
 	content: "";
@@ -2017,5 +2017,5 @@ a {
 	width: 20px;
     height: 20px;
 	position: absolute;
-    background: #fff url(//pc-newtab-img.maxthon.com/static/img/icon/union.png?v=20170830) no-repeat -5px -65px;
+    background: #fff url(//pc-newtab.maxthonimg.com/static/img/icon/union.png?v=20170830) no-repeat -5px -65px;
 }

@@ -78,7 +78,7 @@ $.fn.dialog = function (options) {
     }
 
     var show = function () {
-
+        
         $mx_mask_layer.off('click').on('click', function (e) {
             if (op.close()) {
                 closeFun();
@@ -362,7 +362,7 @@ treeMenu.prototype = {
         }
     },
     getDom: function (a) {
-        // if (!a) { return '\n<ul >\n</ul>\n'; }  //当前节点不存在的时候，退出
+        // if (!a) { return '\n<ul >\n</ul>\n'; }  //当前节点不存在的时候，退出  
         var html = '\n<ul id="note_tree">\n';
         if(a) {
             for (var i = 0; i < a.length; i++) {
@@ -377,7 +377,7 @@ treeMenu.prototype = {
         }
         html += '</ul>\n';
         return html;
-    }
+    } 
 }
 
 /* Menu Methods */
@@ -439,7 +439,7 @@ var Menu = {
     },
 
     createPopupMenu: function () {
-
+    
         var node = document.createElement("div");
         node.setAttribute('id', 'mx_popup_menu');
         node.setAttribute('class', 'mx-popup-menu');
@@ -468,7 +468,7 @@ var Menu = {
         } else {
             left = clientX;
         }
-
+        
         menuContent.style.cssText = 'left:' + (left + scrollLeft) + 'px; top:' + (top + scrollTop) + 'px;width:' + (offsetWidth + 10) + 'px; z-index:999;';
 
         var items = $(menuContent).find('.mx-menu-item');
@@ -516,7 +516,7 @@ $(function () {
     var SYNC_KEY_QA = 'qa_layout';
     var SYNC_KEY_QA_WIDGET = 'qa_widget';
     var MAP_LIST = {};
-
+    
     window.Api = window.Api || {};
     window.Api.Maxthon = (function () {
 
@@ -542,8 +542,8 @@ $(function () {
 
         /**
          * 获取页面信息
-         * @param
-         * @return
+         * @param  
+         * @return 
          */
         function getLayout(layout, widget, callback) {
             var _this = this;
@@ -726,7 +726,7 @@ $(function () {
 
         /**
          * 判断本地是否存在截图
-         * @param url
+         * @param url 
          * @param cb
          */
         function isThumbExists(url, cb) {
@@ -883,7 +883,7 @@ $(function () {
     })();
 
     window.Api.Grid = (function () {
-
+        
         function saveOrUpdate(cb) {
             maxthon.getSyncValue(MY_SITE, function (data_list) {
                 if ($.isEmptyObject(data_list)) {
@@ -935,7 +935,7 @@ $(function () {
                     }
                 });
                 Controller.onGetGridList(mx5_layout, MAP_LIST);
-                next();
+                next && next();
             });
         }
 
@@ -1035,6 +1035,7 @@ $(function () {
             var url = 'http://g.dcs.maxthon.com/mx4/web?rnd=' + rnd + '&data=';
             var str = encodeURIComponent( JSON.stringify( data ) );
             var img = new Image();
+            console.log(url);
             img.src = url + str;
         }
 
@@ -1065,9 +1066,14 @@ $(function () {
             config.pm = navigator.platform || '',
             config.d = macAddress,
             config.uid = maxthon.uid,
-            config.ssid = ssid || '',
             // 浏览器版本
             config.cv = maxthon.max_version;
+            ssid = localStorage.getItem('SSID');
+            if(!ssid) {
+                ssid = guid();
+                localStorage.setItem('SSID' , ssid);
+            }
+            config.ssid = ssid;
             $.extend(config.data, data.data);
             sendWebStat(config);
         }
@@ -2294,7 +2300,7 @@ grid.tranData = function(item) {
                 if(item['sq_img'] || item['re_img']) {
                     img = item.isHot === true ? item['sq_img'] : item['re_img']
                 } else {
-                    var match = item.image.match(/(?:Re|Sq)\/(.+(\.png)+)(?:\.webp)?/);
+                    var match = item.image.match(/(?:Re|Sq)\/(.+(\.jpg|png|gif)+)(?:\.webp)?/);
                     img = match ? match[1] : 'offline.png'
                 }
 
@@ -2412,18 +2418,20 @@ $(function () {
             }
 
             if (self.thumburls.length === 0) return;
-
-            window.Api.Tools.isThumbExists(self.thumburls, function (result) {
-                var childNodes = self.list_node.childNodes;
-                result.forEach(function (item, i) {
-                    var childNode = childNodes[i];
-                    if (item === true && childNode.className.indexOf('loading') !== -1) {
-                        var url = self.thumburls[i];
-                        childNode.className = 'thumbnail';
-                        childNode.style.cssText = 'background-image : url(' + newWin.getThumbsUrl(url, 0) + ')';
-                    }
+            // 截图代码调整成异步执行
+            setTimeout(function() {
+                window.Api.Tools.isThumbExists(self.thumburls, function (result) {
+                    var childNodes = self.list_node.childNodes;
+                    result.forEach(function (item, i) {
+                        var childNode = childNodes[i];
+                        if (item === true && childNode.className.indexOf('loading') !== -1) {
+                            var url = self.thumburls[i];
+                            childNode.className = 'thumbnail';
+                            childNode.style.cssText = 'background-image : url(' + newWin.getThumbsUrl(url, 0) + ')';
+                        }
+                    });
                 });
-            });
+            }, 10);
         }
 
         function getGridPosition(index) {
@@ -2580,14 +2588,12 @@ $(function () {
                 return false;
             }
 
-            if (maxthon.max_version.cmpVersions('5.0.1.1600')) {
-                setTimeout(function() {
-                    maxthon.useApi('newTabUpground', { 'url': obj.url });
-                }, 10);
-                // 关闭文件夹弹框
-                current_group && hideGroup();
-                return false;
-            }
+            setTimeout(function() {
+                maxthon.useApi('newTabUpground', { 'url': obj.url });
+            }, 10);
+            // 关闭文件夹弹框
+            current_group && hideGroup();
+            // return false;
         }
 
         function showGroup() {
@@ -2599,16 +2605,20 @@ $(function () {
             current_group.container.addClass('show');
             group_operate = $group_dialog.dialog({
                 init: function () {
+                    var urlList = [], nodeList = [];
                     current_group.children.forEach(function (item, i) {
                         if (!item.node.hasClass('loading')) {
                             return true;
                         }
-                        window.Api.Tools.isThumbExists([item.url], function (result) {
-                            result.forEach(function (res, i) {
-                                if (res === true) {
-                                    item.reload();
-                                }
-                            });
+                        urlList.push(item.url);
+                        nodeList.push(item);
+                    });
+
+                    window.Api.Tools.isThumbExists(urlList, function (result) {
+                        result.forEach(function (res, i) {
+                            if (res === true) {
+                                nodeList[i].reload();
+                            }
                         });
                     });
                 },
@@ -2933,7 +2943,7 @@ $(function () {
                 beginY = xy.top;// 解决滚屏问题
                 mouse_beginX = event.clientX;
                 mouse_beginY = event.clientY;
-
+                
                 document.addEventListener('mousemove', doDrag, false);
                 document.addEventListener('mouseup', stopDrag, false);
             }
@@ -2943,7 +2953,7 @@ $(function () {
                 if ((Math.abs(event.clientX - mouse_beginX) === 0) || (Math.abs(event.clientY - mouse_beginY) === 0)) {
                     return;
                 }
-
+                
                 var sxy = getScroll();
                 var left = beginX + sxy.left + event.clientX - mouse_beginX;
                 var top = beginY + sxy.top + event.clientY - mouse_beginY;
@@ -3033,7 +3043,6 @@ $(function () {
                             }
                         }
                     }
-
                     current_drop = null;
                 }
             }
@@ -3075,13 +3084,16 @@ $(function () {
                             }
                             return false;
                         }
-                        gridClick(_this);
-                        return false;
+                        if (maxthon.max_version.cmpVersions('5.0.1.1600') > 0) { 
+                            gridClick(_this);
+                            return false;
+                        }
+                        return true;
                     });
 
                     if (_this.image && _this.image.startWith('mx://thumbs')) {
                         grid_node.addClass('loading');
-                        window.Api.Tools.isThumbExists([_this.url], function (result) {
+                        window.Api.Tools.isThumbExists([_this.url], function(result) {
                             result.forEach(function (item, i) {
                                 if (item === true) {
                                     _this.node.removeClass('loading');
@@ -3254,7 +3266,7 @@ $(function () {
             grid_ui_data.container_width = $grid_body.width();
             grid_ui_data.height = grid_ui_data.container_width * 0.15 * 0.7 + grid_ui_data.container_width * 0.01;
         }
-
+        
         function windowResizeWidth() {
             grid_ui_data.top_container_width = $top_container.width();
             grid_ui_data.container_width = $grid_body.width();
@@ -3810,6 +3822,44 @@ $(function () {
         return { close: close }
     })();
 
+    // window.Observer = (function() {
+    //     maxthon.useApi('quickaccess.addEventListener', {}, function (res) {
+    //         if ($.isEmptyObject(res)) return;
+    //         console.log(res);
+    //         switch (res.type) {
+    //             case 'thumbUpdated': // 截图完成
+    //                 var dataurl = res.data;
+    //                 for(let i=0; i< data_list.length; i ++) {
+    //                     var item = data_list[i];
+    //                     if(dataurl === item.url && item.node.hasClass('loading')) {
+    //                         item.image = newWin.getThumbsUrl(dataurl, 0);
+    //                         item.node.removeClass('loading');
+    //                     }
+    //                 }
+    //                 break;
+    //             case 'guestSuccess': // MX4 guest数据导入成功
+    //                 api.Grid.getGridDataList();
+    //                 break;
+    //             case 'guest5Success': // MX5 guest数据导入成功
+    //                 api.getGridDataList();
+    //                 break;
+    //                 case 'dataSyncCompleted':
+    //                 if (maxthon.max_version.cmpVersions('5.0.3.400') > 0) {
+    //                     api.Grid.getGridDataList();
+    //                     return;
+    //                 }
+    
+    //                 if (!isSync) {
+    //                     isSync = true;
+    //                     api.Grid.getGridDataList();
+    //                 }
+    //                 break;
+    //             case 'addNewSite':
+                    
+    //                 break;
+    //         }
+    //     });
+    // })();
 });
 /**
  * 新标签页换肤功能
@@ -3823,9 +3873,9 @@ $(function () {
  *      'brightness' : ['light','dark']   dark 明亮度
  *      'pic' : ['','','','']
  *      'type' : '' built-in : 内置, custome 用户自定义
- *      'mode'  : '' ,
+ *      'mode'  : '' , 
  * }
- *
+ * 
  */
 $(function () {
     var configPanel = (function () {
@@ -3859,6 +3909,8 @@ $(function () {
             ];
             // 当版本小于5.0.4.400时，由于会有视频弹框需要屏蔽
             version.cmpVersions('5.0.4.400') < 0 && background.splice(2, 5);
+            version.cmpVersions('5.0.3.400') < 0 && $config_layer.find(".tips").remove() && $config_layer.find(".a-upload").height(0);
+
             var htmlAttr = [];
             background.forEach(function (data, i) {
                 htmlAttr.push('<li class="skin-img-item" name="' + data.data_code + '">');
@@ -3913,7 +3965,7 @@ $(function () {
                     } else {
                         switchBackgroundVideo(option.bgIndex, backgroundData.pic);
                     }
-                    $background_list.find('>li').eq(option.bgIndex).addClass('selected');
+                    $background_list.find('>li').removeClass('selected').eq(option.bgIndex).addClass('selected');
                     // UI适配
                     switchDarkOrLight(backgroundData.brightness);
                 }
@@ -4137,14 +4189,17 @@ $(function () {
 
             // fixed: mac浏览器屏蔽上次未关闭标签
             if(maxthon.platform === 'Mac') {
-                $grid_tab_node.eq(3).remove();
+                $grid_tab_node.eq(3).remove(); 
             }
             // 补丁: 兼容1.6版本客户端不支持的接口
-            // if(maxthon.max_version.cmpVersions('5.0.3.200') < 0 ||
-            //     maxthon.max_version.cmpVersions('5.0.16') < 0) {
-            //     $dialog_node.find('.dialog-input').eq(2).css({'padding': ' 50px 0 80px'});
-            //     $dialog_node.find('.dialog-input').eq(1).remove();
-            // }
+            if( (maxthon.platform === 'Win' && maxthon.max_version.cmpVersions('5.0.3.200') < 0) ||
+                (maxthon.platform === 'Mac' && maxthon.max_version.cmpVersions('5.0.16') < 0)) {
+                $color_block.css({'left': '0px', 'top': '70px', 'width': '590px'});
+                $color_block_list.css({'width':'50px', 'height':'50px', 'margin':'20px 15px 0 0px'});
+                $dialog_node.find('.dialog-input').eq(3).css({'position': 'relative', 'top': '140px', 'left': '250px'});
+                $dialog_node.find('.dialog-input').eq(1).remove();
+                $('<style>.color-block-list li.selected::after{background-position:-5px -65px;}</style>').appendTo('head');
+            }
 
             $dialog_nav_node.on('click', function () {
                 var $this = $(this);
@@ -4301,10 +4356,14 @@ $(function () {
                 // 防止频繁点击，导致添加多次
                 $this.addClass('disable');
                 var $ele = $this.find('a');
-                var g = {
-                    'title': $ele.attr('title'),                     // 标题
-                    'url': $ele.attr('href'),                        // url链接
-                    'image': $this.find('img').attr('src'),          // 图片路径
+                var item = {
+                    'title': $ele.attr('d-title'),                                  // 标题
+                    'url': $ele.attr('href'),                                       // url链接
+                    'image': $ele.attr('d-image'),                                  // 图片路径
+                    'sq_img' : $ele.attr('d-sq-img'),
+                    'sq_md5sum' : $ele.attr('d-sq-md5'), 
+                    're_img' : $ele.attr('d-re-img'), 
+                    're_md5sum' : $ele.attr('d-re-md5'), 
                     'isHot': false
                 };
 
@@ -4318,10 +4377,10 @@ $(function () {
                     document.body.appendChild(target_grid[0]);
                     // 获取移动位置
                     var grid = Controller.getGridItem(grid_index).grid;
-                    g.index = grid_index;
+                    item.index = grid_index;
                     if (grid.isHot === true) {
-                        g.isHot = true;
-                        g.image = g.image.replace('/Re/', '/Sq/');
+                        item.isHot = true;
+                        // g.image = g.image.replace('/Re/', '/Sq/');
                     }
 
                     var editOperate = editableMode();
@@ -4337,14 +4396,14 @@ $(function () {
                         var t2 = p2.top + document.body.scrollTop;
                         target_grid.css({ "left": l2, "top": t2 });
                         setTimeout(function() {
-                            editOperate ? Controller.onUpdateGridItem(g) : Controller.onInsertGridItem(g, grid);
+                            editOperate ? Controller.onUpdateGridItem(item) : Controller.onInsertGridItem(item, grid);
                             if (target_grid) {
                                 document.body.removeChild(target_grid[0]);
                                 target_grid = null;
                             }
                         }, 300);
                     } else {
-                        Controller.onUpdateGridItem(g);
+                        Controller.onUpdateGridItem(item);
                         if (target_grid) {
                             document.body.removeChild(target_grid[0]);
                             target_grid = null;
@@ -4359,7 +4418,7 @@ $(function () {
                         n: editOperate ? 'edit' : 'add',
                         p: 'success',
                         data: {
-                            'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex,
+                            'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex, 
                             'addSource': 'default'
                         }
                     };
@@ -4423,9 +4482,9 @@ $(function () {
                 }
                 var ueip_data = {
                     o: grid.isHot === true ? 'top' : 'fav',
-                    data: {
-                        'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex,
-                        'addSource': grid_source || 'custome'
+                    data: { 
+                        'addPosition': grid.isHot === true ? grid.topuiindex : grid.uiindex, 
+                        'addSource': grid_source || 'custome' 
                     },
                     m: 'managesites'
                 };
@@ -4484,7 +4543,7 @@ $(function () {
                     case 1:
                         ueip_data.n = 'screenshot';
                         break;
-                    default:
+                    default: 
                         ueip_data.n = 'colorBlock';
                         break;
                 }
@@ -4696,7 +4755,7 @@ $(function () {
         }
         /**
          * 根据url更新radio列表
-         * @param options
+         * @param options 
          * @param editable 是否能切换
          */
         function updateRadio(options, editable) {
@@ -4729,32 +4788,40 @@ $(function () {
         function renderGridHtml(data) {
             var _html = [];
             for (var i = 0; i < data.list.length; i++) {
-                var list = data.list[i];
+                var item = data.list[i];
+
+                if(mapList[item.url]) { // map中有md5
+                    item['sq_img'] = mapList[item.url]['sq_img'] || '';
+                    item['re_img'] = mapList[item.url]['re_img'] || '';
+                    item['re_md5sum'] = mapList[item.url]['re_md5sum'] || '';
+                    item['sq_md5sum'] = mapList[item.url]['sq_md5sum'] || '';
+                }
+                item = grid.tranData(item);
                 _html.push('<li>');
-                _html.push('<a href="' + list.url + '" target="_blank">');
-                _html.push('<img class="grid-img" src="' + getGridImage(list) + '" width="150" height="100"/>');
-                _html.push('<p class="grid-title">' + list.title + '</p>');
+                _html.push('<a href="' + item.url + '" d-title="' + item.title + '" d-image="' + item.image + '" d-sq-img="' + item.sq_img + '" d-sq-md5="' + item.sq_md5sum + '" d-re-img="' + item.re_img + '" d-re-md5="' + item.re_md5sum + '" target="_blank">');
+                _html.push('<img class="grid-img" src="' + item.image + '" width="150" height="100"/>');
+                _html.push('<p class="grid-title">' + item.title + '</p>');
                 _html.push('</a>');
                 _html.push('</li>');
             }
             $dialog_grid.empty().append(_html.join(''));
         }
 
-        function getGridImage(data) {
-            var img, md = mapList[data.url] || {};
-            if(md['re_img']) {
-                img = md['re_img']
-            } else {
-                var match = data.image.match(/(?:Re|Sq)\/(.+(\.png)+)(?:\.webp)?/);
-                img = match ? match[1] : 'offline.png'
-            }
+        // function getGridImage(data) {
+        //     var img, md = mapList[data.url] || {};
+        //     if(md['re_img']) {
+        //         img = md['re_img']
+        //     } else {
+        //         var match = data.image.match(/(?:Re|Sq)\/(.+(\.jpg|png|gif)+)(?:\.webp)?/);
+        //         img = match ? match[1] : 'offline.png'
+        //     }
 
-            if(maxthon.platform === 'Win') img += '.webp'
-            if(md['re_md5sum']) {
-                img += '?md5=' + md['re_md5sum']
-            }
-            return cdnServer + '/image/logo/Re/' + img;
-        }
+        //     if(maxthon.platform === 'Win') img += '.webp'
+        //     if(md['re_md5sum']) {
+        //         img += '?md5=' + md['re_md5sum']
+        //     }
+        //     return cdnServer + '/image/logo/Re/' + img;
+        // }
 
         function renderUrlList(data, $dom) {
             var html = ['<ul>'];
@@ -4890,7 +4957,7 @@ $(function () {
                 return cdnServer + '/image/logo/Re/offline.png';
             }
         }
-
+        
         return {
             init: init,
             getThumbsUrl: getThumbsUrl,
@@ -4906,67 +4973,16 @@ $(function () {
  * 监听器
  */
 $(function () {
-    var maxthon = window.Api.Maxthon;
+    var maxthon = window.Api.Maxthon, isSync = false;
     maxthon.useApi('quickaccess.addEventListener', {}, function (result) {
-
         if ($.isEmptyObject(result)) return;
         console.log(result);
         switch (result.type) {
             case 'thumbUpdated': // 截图完成
-                var dataurl = result.data,
-                    datatitle = result.title;
-                /**
-                 * 文件夹缩略图
-                 */
-                $grid_container.find('.thumbnail[url="' + dataurl + '"]').each(function (i, n) {
-                    var $this = $(n);
-                    $this.removeClass('loading').removeAttr('url')
-                        .css({ 'background-image': 'url(' + newWin.getThumbsUrl(dataurl, 0) + ')' });
-                });
-
-                if ($group_dialog.is(':visible')) {
-                    $group_dialog.find('li.loading').each(function (i, n) {
-                        var $this = $(n);
-                        var $link = $this.find('>a'),
-                            $thumb = $link.find('.thumb'),
-                            url = $link.attr('href');
-                        if (url === dataurl) {
-                            $thumb.css({ 'background-image': 'url(' + newWin.getThumbsUrl(dataurl, 0) + ')' });
-                            $this.removeClass('loading');
-                            return true;
-                        }
-                    });
-                }
-
-                if (!$('#add-dialog').is(':visible')) {
-                    $top_container.find('li.loading').each(function (i, n) {
-                        var $this = $(n);
-                        var $link = $this.find('>a'),
-                            url = $link.attr('href');
-
-                        if (url === dataurl) {
-                            $link.css('background-image', 'url(' + newWin.getThumbsUrl(url, 0) + ')');
-                            $this.removeClass('loading');
-                        }
-                        return true;
-                    });
-
-                    $grid_container.find('li.loading').each(function (i, n) {
-                        var $this = $(n);
-                        var $link = $this.find('>a'),
-                            url = $link.attr('href');
-                        console.log(url + ' === ' + dataurl);
-                        if (url === dataurl) {
-                            if (!$this.hasClass('no-img')) {
-                                var imgurl = newWin.getThumbsUrl(url, 0);
-                                $link.attr('data-image', imgurl);
-                                $link.find('.thumb').css('background-image', 'url(' + imgurl + ')');
-                            }
-                            $this.removeClass('loading');
-                        }
-                        return true;
-                    });
-                }
+                var dataurl = result.data;
+                // console.log(dataurl + '截图完成!');
+                // 先后对两个网站截图，永远是最后一个完成的dataurl
+                window.setTimeout(function(url) {handler(url)} ,0, dataurl);
                 break;
             case 'guestSuccess': // MX4 guest数据导入成功
                 window.Api.Grid.getGridDataList();
@@ -4975,7 +4991,15 @@ $(function () {
                 window.Api.Grid.getGridDataList();
                 break;
             case 'dataSyncCompleted':
-                window.Api.Grid.getGridDataList();
+                if (maxthon.max_version.cmpVersions('5.0.3.400') > 0) {
+                    window.Api.Grid.getGridDataList();
+                    return;
+                }
+
+                if (!isSync) {
+                    isSync = true;
+                    window.Api.Grid.getGridDataList();
+                }
                 break;
             case 'addNewSite':
                 var g = {
@@ -4985,11 +5009,11 @@ $(function () {
                 var regex = /.*\:\/\/([^\/]*).*/;
                 var match = g.url.match(regex);
                 var host = '';
-                if(typeof match != "undefined"  && null != match) {
+                if (typeof match != "undefined" && null != match) {
                     host = match[1];
                 }
 
-                if(host !== '') {
+                if (host !== '') {
                     innerloop:
                     for (var i = 0; i < SITE_LIST.length; i++) {
                         var category = SITE_LIST[i];
@@ -5032,6 +5056,61 @@ $(function () {
                 break;
         }
     });
+
+    function handler(dataurl) {
+        /**
+         * 文件夹缩略图
+         */
+        $grid_container.find('.thumbnail[url="' + dataurl + '"]').each(function (i, n) {
+            var $this = $(n);
+            $this.removeClass('loading').removeAttr('url')
+                .css({ 'background-image': 'url(' + newWin.getThumbsUrl(dataurl, 0) + ')' });
+        });
+
+        if ($group_dialog.is(':visible')) {
+            $group_dialog.find('li.loading').each(function (i, n) {
+                var $this = $(n);
+                var $link = $this.find('>a'),
+                    $thumb = $link.find('.thumb'),
+                    url = $link.attr('href');
+                if (url === dataurl) {
+                    $thumb.css({ 'background-image': 'url(' + newWin.getThumbsUrl(dataurl, 0) + ')' });
+                    $this.removeClass('loading');
+                    return true;
+                }
+            });
+        }
+
+        if (!$('#add-dialog').is(':visible')) {
+            $top_container.find('li.loading').each(function (i, n) {
+                var $this = $(n);
+                var $link = $this.find('>a'),
+                    url = $link.attr('href');
+
+                if (url === dataurl) {
+                    $link.css('background-image', 'url(' + newWin.getThumbsUrl(url, 0) + ')');
+                    $this.removeClass('loading');
+                }
+                return true;
+            });
+
+            $grid_container.find('li.loading').each(function (i, n) {
+                var $this = $(n);
+                var $link = $this.find('>a'),
+                    url = $link.attr('href');
+                console.log(url + ' === ' + dataurl);
+                if (url === dataurl) {
+                    if (!$this.hasClass('no-img')) {
+                        var imgurl = newWin.getThumbsUrl(url, 0);
+                        $link.attr('data-image', imgurl);
+                        $link.find('.thumb').css('background-image', 'url(' + imgurl + ')');
+                    }
+                    $this.removeClass('loading');
+                }
+                return true;
+            });
+        }
+    }
 });
 /**
  * 数据统计
@@ -5112,8 +5191,8 @@ $(function () {
     });
 
     var lang = navigator.language.toLocaleLowerCase();
-    Promise.all([getPageTpl(lang), /*getMapList(),*/ getPageData(lang)])
-    .then(function(data) {
+    Promise.all([getPageTpl(lang), getPageData(lang)])
+    .then(function(data) { 
         pageinit(data[0]);
         $('#page_data').append(data[1]);
     }).catch(function(err) {
@@ -5158,12 +5237,10 @@ $(function () {
     }
 
     function pageinit(tpl) {
-        var mapList = __PRELOAD__['map_list.json'];
+        var mapList = __PRELOAD__['map_list.json'] || JSON.parse(localStorage.getItem('MAP_LIST_JSON'));
         var activity;
 
-        if(Api.Maxthon.max_version === '5.1.2.3000'
-            && lang === 'zh-cn'
-            && mapList['activity'] && mapList['activity'].length > 0) {
+        if(lang === 'zh-cn' && mapList['activity'] && mapList['activity'].length > 0) {
             var now = Date.now();
             mapList['activity'].forEach(function(_activity) {
                 _activity.stime = _activity['stime'];
@@ -5188,17 +5265,17 @@ $(function () {
 
     /**
      *  加载活动
-     * @param {活动信息} activity
+     * @param {活动信息} activity 
      */
     function loadActivity(activity) {
-        getStore('activity_tpl',
-                'local_act_template',
+        getStore('activity_tpl', 
+                'local_act_template', 
                 lang,
                 '/static/res/tpl/activity.tpl').then(function(tpl) {
             var actHtml = /*localStorage.getItem('__ACTHTML__') ? localStorage.getItem('__ACTHTML__') :*/ template(tpl, { activity: activity });
             document.getElementById('activity').innerHTML = actHtml;
             // localStorage.setItem('__ACTHTML__', actHtml);
-
+            
             var hoverTimer;
             $('.nav-header-menu li').on('mouseover mouseout', function(e) {
                 e.stopPropagation();
@@ -5289,8 +5366,8 @@ $(function () {
         firstLoad()
     })
 
-    if(lang !== 'zh-cn') { //
-        $('.siderbar img').attr('src', '//pc-newtab-img.maxthon.com/static/img/qcode-foreign.png')
+    if(lang !== 'zh-cn') { // 
+        $('.siderbar img').attr('src', '//pc-newtab.maxthonimg.com/static/img/qcode-foreign.png')
         $('.siderbar .title').text('Try MX5 App')
     }
 

@@ -2519,7 +2519,7 @@ $(function () {
                                 <span class="line">|</span>\
                                 <span class="login">' + Language.getLang('Login') + '</span>\
                                 <div class="profile-dropdown">\
-                                    <img src="//pc-newtab-img.maxthon.com/static/img/guest.png" alt="photo"/>\
+                                    <img src="//pc-newtab.maxthonimg.com/static/img/guest.png" alt="photo"/>\
                                 </div>\
                             </li>\
                         </ul>');
@@ -2560,7 +2560,7 @@ $(function () {
 						<span class="line">|</span>\
 						<span class="login-user">' + data.nickname + '</span>\
 						<div class="profile-dropdown">\
-							<img src="'+ data.avatarUrl.replace(/^(https?:\/\/.+\.maxthon)/, 'https://avatar.maxthon') + '" alt="头像" onerror="//pc-newtab-img.maxthon.com/static/img/icon/default.png"/>\
+							<img src="'+ data.avatarUrl.replace(/^(https?:\/\/.+\.maxthon)/, 'https://avatar.maxthon') + '" alt="头像" onerror="//pc-newtab.maxthonimg.com/static/img/icon/default.png"/>\
 							<div class="profile-continer">\
 								<div class="profile-detail">\
 									<h4>\
@@ -3133,13 +3133,13 @@ $(function () {
          * 百度商务站点打开统计
          */
         function baiduStatic(obj) {
-            if (obj.url === 'https://www.baidu.com/index.php?tn=maxthon2&ch=2') {
+            if (obj.url === 'https://go.mxfast.com/bd1/') {
                 window.Api.statistic.webSend({
                     'm': 'mx5Commerciallink',
                     'n': 'baidu',
                     'data': {
                         'title': 'MX5新标签页百度站点',
-                        'url': 'https://www.baidu.com/index.php?tn=maxthon2&ch=2'
+                        'url': 'https://go.mxfast.com/bd1/'
                     }
                 });
             }

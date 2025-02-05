@@ -2,6 +2,7 @@
 // new NewsLoader({
 //   container: '#news-container',  // 内容容器选择器
 //   scrollbar: '#news-containe',   // 滚动容器选择器，默认body
+//   category: 'Trending',          // 分类
 // });
 class MxNewsLoader {
   constructor(config) {
@@ -10,7 +11,7 @@ class MxNewsLoader {
       container: config.container ? document.querySelector(config.container) : document.body,
       scrollbar: config.scrollbar ? document.querySelector(config.scrollbar) : document.documentElement,
       scrollbarBindEvent: config.scrollbar ? document.querySelector(config.scrollbar) : window,
-      category: 'Trending'
+      category: config.category || 'Trending'
     };
 
     // 常量

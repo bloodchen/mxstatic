@@ -5402,7 +5402,7 @@ function lo(e) {
   const o = t.diff(n, "day");
   return o < 7 ? `${o}d ago` : t.diff(n, "year") <= 1 ? n.format("MMM D") : n.format("MMM YYYY");
 }
-const Zn = Mc() === "pc", Hc = Rc(), Tc = "https://mxnewsdata.pages.dev/news_en", zc = "https://mxnews.pages.dev/";
+const Zn = Mc() === "pc", Hc = Rc(), Tc = "https://mxnewsdata.pages.dev/news_en", zc = "news.mxfast.com";
 async function jc(e = "usa") {
   const t = await fetch(`${Tc}/${Hc}/${e}.json`), n = [];
   try {
@@ -5420,7 +5420,7 @@ async function jc(e = "usa") {
           tag: s.source,
           date: lo(s.pubDate),
           imageList: [s.image, ...s.images || []],
-          link: `${zc}#/detail/${s.category.toLowerCase()}/${r}`
+          link: `${zc}/#/detail/${s.category.toLowerCase()}/${r}`
         };
         n.push(o);
       }

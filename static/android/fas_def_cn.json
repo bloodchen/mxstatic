@@ -174,18 +174,6 @@
                     "add_times": 2706
                 },
                 {
-                    "app_id": 778,
-                    "appname": "百度",
-                    "description": "精准搜索引擎",
-                    "url": "https%3A%2F%2Fm.baidu.com%2F%3Ffrom%3D1006170a",
-                    "icon": "http%3A%2F%2Fmm.maxthon.cn%2Fwebapp%2Fapp%2F2016%2F09%2F12%2F14736624503243.png",
-                    "iscommend": 0,
-                    "isnew": 0,
-                    "screen": "",
-                    "category_id": 24,
-                    "add_times": 4793
-                },
-                {
                     "app_id": 792,
                     "appname": "亚马逊",
                     "description": "全球优质购物",

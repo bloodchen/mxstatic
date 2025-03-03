@@ -762,18 +762,6 @@
             "title": "名站导航",
             "subapp": [
                 {
-                    "app_id": 991,
-                    "appname": "百度",
-                    "description": "百度搜索，信息全掌握",
-                    "url": "https%3A%2F%2Fm.baidu.com%2F%3Ffrom%3D1006170f",
-                    "icon": "http%3A%2F%2Fmm.maxthon.cn%2Fwebapp%2Fapp%2F2018%2F01%2F21%2F15165161548277.png",
-                    "iscommend": 0,
-                    "isnew": 0,
-                    "screen": "",
-                    "category_id": 37,
-                    "add_times": 3728
-                },
-                {
                     "app_id": 958,
                     "appname": "凤凰新闻",
                     "description": "凤凰新闻，实时热点",

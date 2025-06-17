@@ -162,18 +162,6 @@
                     "add_times": 2143
                 },
                 {
-                    "app_id": 788,
-                    "appname": "汽车之家",
-                    "description": "汽车新闻中心",
-                    "url": "http%3A%2F%2Fm.autohome.com.cn%2F",
-                    "icon": "http%3A%2F%2Fmm.maxthon.cn%2Fwebapp%2Fapp%2F2016%2F09%2F12%2F14736637012541.png",
-                    "iscommend": 0,
-                    "isnew": 0,
-                    "screen": "",
-                    "category_id": 24,
-                    "add_times": 2706
-                },
-                {
                     "app_id": 792,
                     "appname": "亚马逊",
                     "description": "全球优质购物",
@@ -876,18 +864,6 @@
                     "add_times": 1667
                 },
                 {
-                    "app_id": 996,
-                    "appname": "汽车之家",
-                    "description": "汽车之家，购车必看",
-                    "url": "https%3A%2F%2Fcar.m.autohome.com.cn%2F%23pvareaid%3D6839143",
-                    "icon": "http%3A%2F%2Fmm.maxthon.cn%2Fwebapp%2Fapp%2F2018%2F11%2F12%2F15419892453866.png",
-                    "iscommend": 0,
-                    "isnew": 0,
-                    "screen": "",
-                    "category_id": 41,
-                    "add_times": 1304
-                },
-                {
                     "app_id": 997,
                     "appname": "京东",
                     "description": "京东，正品好货",
@@ -910,18 +886,6 @@
                     "screen": "",
                     "category_id": 41,
                     "add_times": 863
-                },
-                {
-                    "app_id": 998,
-                    "appname": "拼多多",
-                    "description": "拼多多，团购更省",
-                    "url": "https%3A%2F%2Fp.pinduoduo.com%2FsovbsOFj",
-                    "icon": "http%3A%2F%2Fmm.maxthon.cn%2Fwebapp%2Fapp%2F2021%2F12%2F15%2F16395391662275.png",
-                    "iscommend": 0,
-                    "isnew": 0,
-                    "screen": "",
-                    "category_id": 41,
-                    "add_times": 921
                 },
                 {
                     "app_id": 999,
@@ -978,18 +942,6 @@
                     "add_times": 651
                 },
                 {
-                    "app_id": 1014,
-                    "appname": "汽车之家",
-                    "description": "汽车之家，选车看车",
-                    "url": "https%3A%2F%2Fcar.m.autohome.com.cn%2F%23pvareaid%3D6839143",
-                    "icon": "http%3A%2F%2Fmm.maxthon.cn%2Fwebapp%2Fapp%2F2020%2F10%2F10%2F16023239671765.png",
-                    "iscommend": 0,
-                    "isnew": 0,
-                    "screen": "",
-                    "category_id": 43,
-                    "add_times": 620
-                },
-                {
                     "app_id": 1016,
                     "appname": "爱淘宝",
                     "description": "爱淘宝，享购物乐",
@@ -1024,18 +976,6 @@
                     "screen": "",
                     "category_id": 43,
                     "add_times": 579
-                },
-                {
-                    "app_id": 1031,
-                    "appname": "拼多多",
-                    "description": "拼多多，购物新风",
-                    "url": "https%3A%2F%2Fp.pinduoduo.com%2FsovbsOFj",
-                    "icon": "http%3A%2F%2Fmm.maxthon.cn%2Fwebapp%2Fapp%2F2021%2F12%2F15%2F16395392377954.png",
-                    "iscommend": 0,
-                    "isnew": 0,
-                    "screen": "",
-                    "category_id": 43,
-                    "add_times": 511
                 }
             ]
         }
